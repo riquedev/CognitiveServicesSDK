@@ -43,7 +43,7 @@ class AnalyzeImage {
     }
 
     public function Send(string $imageUrl) {
-        $endPoint = CVA_ENDPOINT_COMPUTERVISION_ANALYZEIMAGE . '?details=' . implode(",", $this->details) . "&visualFeatures=" . implode(",", $this->visualFeatures);
+        $endPoint = CVA_COMPUTERVISION_ANALYZEIMAGE . '?details=' . implode(",", $this->details) . "&visualFeatures=" . implode(",", $this->visualFeatures);
         $endPoint .= "&language=" . $this->language;
         $headers = [];
 

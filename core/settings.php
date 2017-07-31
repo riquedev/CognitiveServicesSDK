@@ -26,8 +26,9 @@ define("CVA_API_LOCATION","westus");
 /*
  * END POINT DA API
  */
-define("CVA_ENDPOINT_COMPUTERVISION_ANALYZEIMAGE", "https://".CVA_API_LOCATION.".api.cognitive.microsoft.com/vision/v1.0/analyze");
-define("CVA_ENDPOINT_COMPUTERVISION_DESCRIBEIMAGE","")
+define("CVA_ENDPOINT","https://".CVA_API_LOCATION.".api.cognitive.microsoft.com/vision/v1.0/");
+define("CVA_COMPUTERVISION_ANALYZEIMAGE", CVA_ENDPOINT."analyze");
+define("CVA_COMPUTERVISION_DESCRIBEIMAGE",CVA_ENDPOINT."describe");
 
 /*
  * Chave da API, podem ser obtidas em:
