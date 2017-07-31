@@ -43,16 +43,16 @@ class AnalyzeImage {
     }
 
     public function Send(string $imageUrl) {
-        $endPoint = CVA_ENDPOINT_COMPUTERVISION . '?details=' . implode(",", $this->details) . "&visualFeatures=" . implode(",", $this->visualFeatures);
+        $endPoint = CVA_ENDPOINT_COMPUTERVISION_ANALYZEIMAGE . '?details=' . implode(",", $this->details) . "&visualFeatures=" . implode(",", $this->visualFeatures);
         $endPoint .= "&language=" . $this->language;
         $headers = [];
-        
+
         foreach (CVA_HEADERS_COMPUTERVISION1 as $key => $value) {
             $headers[] = $key . ":" . $value;
         }
-        
+
         $handle = new Handle($endPoint, $imageUrl, $headers);
-        
+
         if (!$handle::$error) {
             $this->error = $handle::$error;
             return false;

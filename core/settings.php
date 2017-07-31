@@ -1,4 +1,5 @@
 <?php
+
 namespace rqdev\packages\ComputerVisionAPI\consts;
 
 /*
@@ -10,10 +11,23 @@ define("CVA_HTTP_VERSION", CURL_HTTP_VERSION_1_1);
  * Qual versão SSL vamos usar
  */
 define("CVA_SSL_VERSION", CURL_SSLVERSION_DEFAULT);
+
+/*
+ * SERVER LOCATION
+ * West US - westus
+ * East US 2 - eastus2
+ * West Central US - westcentralus
+ * West Europe - westeurope
+ * Southeast Asia - southeastasia
+ */
+
+define("CVA_API_LOCATION","westus");
+
 /*
  * END POINT DA API
  */
-define("CVA_ENDPOINT_COMPUTERVISION", "https://westcentralus.api.cognitive.microsoft.com/vision/v1.0/analyze");
+define("CVA_ENDPOINT_COMPUTERVISION_ANALYZEIMAGE", "https://".CVA_API_LOCATION.".api.cognitive.microsoft.com/vision/v1.0/analyze");
+define("CVA_ENDPOINT_COMPUTERVISION_DESCRIBEIMAGE","")
 
 /*
  * Chave da API, podem ser obtidas em:
@@ -50,7 +64,6 @@ define("CVA_HEADERS_COMPUTERVISION2", array(
 
 // Idioma
 define("CVA_LANGUAGE", 'en'); // zh
-
 // Limite de redirecionamentos
 define("CVA_MAX_REDIRS", 10);
 
