@@ -2,7 +2,7 @@
 
 namespace rqdev\packages\ComputerVisionAPI;
 
-require_once(realpath(dirname(__FILE__)) . 'urlHelper.php');
+require_once(realpath(dirname(__FILE__)) . '\urlHelper.php');
 
 class OpticalCharacterRecognition extends urlHelper {
 

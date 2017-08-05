@@ -1,0 +1,79 @@
+{
+    "categories": [
+        {
+            "name": "abstract_",
+            "score": 0.00390625
+        },
+        {
+            "name": "dark_",
+            "score": 0.4296875
+        },
+        {
+            "name": "others_",
+            "score": 0.00390625
+        },
+        {
+            "name": "outdoor_",
+            "score": 0.00390625,
+            "detail": {
+                "landmarks": []
+            }
+        },
+        {
+            "name": "sky_cloud",
+            "score": 0.3046875
+        }
+    ],
+    "adult": {
+        "isAdultContent": false,
+        "isRacyContent": false,
+        "adultScore": 0.0093437721952796,
+        "racyScore": 0.011614644899964
+    },
+    "tags": [
+        {
+            "name": "abstract",
+            "confidence": 0.68888562917709
+        },
+        {
+            "name": "blur",
+            "confidence": 0.45589914917946
+        },
+        {
+            "name": "light",
+            "confidence": 0.16835954785347
+        }
+    ],
+    "description": {
+        "tags": [
+            "light"
+        ],
+        "captions": [
+            {
+                "text": "a close up of a light",
+                "confidence": 0.39927523622237
+            }
+        ]
+    },
+    "requestId": "30ef665e-77ea-4f3b-9114-61adff9ba415",
+    "metadata": {
+        "width": 3840,
+        "height": 2160,
+        "format": "Png"
+    },
+    "faces": [],
+    "color": {
+        "dominantColorForeground": "Blue",
+        "dominantColorBackground": "Black",
+        "dominantColors": [
+            "Blue",
+            "Black"
+        ],
+        "accentColor": "003C6D",
+        "isBWImg": false
+    },
+    "imageType": {
+        "clipArtType": 0,
+        "lineDrawingType": 0
+    }
+}

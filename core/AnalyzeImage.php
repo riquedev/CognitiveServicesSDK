@@ -12,7 +12,7 @@ namespace rqdev\packages\ComputerVisionAPI;
  *  @version 1.0.5
  * 
  */
-require_once(realpath(dirname(__FILE__)) . 'urlHelper.php');
+require_once(realpath(dirname(__FILE__)) . '\urlHelper.php');
 
 class AnalyzeImage extends urlHelper {
 
@@ -29,7 +29,7 @@ class AnalyzeImage extends urlHelper {
     public $error = [];
 
     /** @var mixed Resposta da requisição */
-    public $response = NULL;
+    public $response;
 
     public function __construct() {
         require_once(realpath(dirname(__FILE__)) . "/settings.php");
@@ -119,7 +119,6 @@ class AnalyzeImage extends urlHelper {
                 $headers[] = $key . ":" . $value;
             }
         }
-
         $handle = new Handle($endPoint, $imageUrl, $headers);
 
         if (!$handle::$error) {

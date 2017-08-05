@@ -5,7 +5,7 @@ namespace rqdev\packages\ComputerVisionAPI;
 /*
  *  Não finalizada.
  */
-require_once(realpath(dirname(__FILE__)) . 'urlHelper.php');
+require_once(realpath(dirname(__FILE__)) . '\urlHelper.php');
 
 class HandwrittenTextOperationResult extends urlHelper {
 

@@ -4,227 +4,227 @@ namespace rqdev\packages\ComputerVisionAPI;
 
 class urlHelper {
 
-    static private $HttpVersion;
-    static private $SSLVersion;
-    static private $APILocation;
-    static private $APILocationArray;
-    static private $APIAfterLocation;
-    static private $APIVersion;
-    static private $APIPaths;
-    static private $SelectedPath;
-    static private $APIComputerVisionKey1;
-    static private $APIComputerVisionKey2;
-    static private $APIEmotionDetectKey1;
-    static private $APIEmotionDetectKey2;
-    static private $APIResponseContent;
-    static private $APILanguage;
-    static private $APIMaxRedirections;
-    static private $APITimeout;
+    private $HttpVersion;
+    private $SSLVersion;
+    private $APILocation;
+    private $APILocationArray;
+    private $APIAfterLocation;
+    private $APIVersion;
+    private $APIPaths;
+    private $SelectedPath;
+    private $APIComputerVisionKey1;
+    private $APIComputerVisionKey2;
+    private $APIEmotionDetectKey1;
+    private $APIEmotionDetectKey2;
+    private $APIResponseContent;
+    private $APILanguage;
+    private $APIMaxRedirections;
+    private $APITimeout;
 
     protected function Prepare() {
 
-        self::$HttpVersion = CVA_HTTP_VERSION;
-        self::$SSLVersion = CVA_SSL_VERSION;
-        self::$APILocation = CVA_API_LOCATION_ARRAY[0];
-        self::$APILocationArray = CVA_API_LOCATION_ARRAY;
-        self::$APIVersion = CVA_API_VERSION;
-        self::$APIPaths = CVA_API_PATHS;
-        self::$SelectedPath = self::$APIPaths[0];
-        self::$APIAfterLocation = CVA_AFTER_LOCATION;
-        self::$APIComputerVisionKey1 = CVA_KEY_COMPUTERVISION1;
-        self::$APIComputerVisionKey2 = CVA_KEY_COMPUTERVISION2;
-        self::$APIEmotionDetectKey1 = CVA_KEY_EMOTIONDETECT1;
-        self::$APIEmotionDetectKey2 = CVA_KEY_EMOTIONDETECT2;
-        self::$APIResponseContent = CVA_CONTENT;
-        self::$APILanguage = CVA_LANGUAGE;
-        self::$APIMaxRedirections = CVA_MAX_REDIRS;
-        self::$APITimeout = CVA_TIMEOUT;
+        $this->HttpVersion = CVA_HTTP_VERSION;
+        $this->SSLVersion = CVA_SSL_VERSION;
+        $this->APILocation = CVA_API_LOCATION_ARRAY[0];
+        $this->APILocationArray = CVA_API_LOCATION_ARRAY;
+        $this->APIVersion = CVA_API_VERSION;
+        $this->APIPaths = CVA_API_PATHS;
+        $this->SelectedPath = $this->APIPaths[0];
+        $this->APIAfterLocation = CVA_AFTER_LOCATION;
+        $this->APIComputerVisionKey1 = CVA_KEY_COMPUTERVISION1;
+        $this->APIComputerVisionKey2 = CVA_KEY_COMPUTERVISION2;
+        $this->APIEmotionDetectKey1 = CVA_KEY_EMOTIONDETECT1;
+        $this->APIEmotionDetectKey2 = CVA_KEY_EMOTIONDETECT2;
+        $this->APIResponseContent = CVA_CONTENT;
+        $this->APILanguage = CVA_LANGUAGE;
+        $this->APIMaxRedirections = CVA_MAX_REDIRS;
+        $this->APITimeout = CVA_TIMEOUT;
     }
 
-    public static function getHttpVersion() {
-        return self::$HttpVersion;
+    public function getHttpVersion() {
+        return $this->HttpVersion;
     }
 
-    public static function getSSLVersion() {
-        return self::$SSLVersion;
+    public function getSSLVersion() {
+        return $this->SSLVersion;
     }
 
-    public static function getAPILocation() {
-        return self::$APILocation;
+    public function getAPILocation() {
+        return $this->APILocation;
     }
 
-    public static function getAPILocationArray() {
-        return self::$APILocationArray;
+    public function getAPILocationArray() {
+        return $this->APILocationArray;
     }
 
-    public static function setHttpVersion($HttpVersion) {
-        self::$HttpVersion = $HttpVersion;
-        return self;
+    public function setHttpVersion($HttpVersion) {
+        $this->HttpVersion = $HttpVersion;
+        return $this;
     }
 
-    public static function setSSLVersion($SSLVersion) {
-        self::$SSLVersion = $SSLVersion;
-        return self;
+    public function setSSLVersion($SSLVersion) {
+        $this->SSLVersion = $SSLVersion;
+        return $this;
     }
 
-    public static function setAPILocation($APILocation) {
-        self::$APILocation = $APILocation;
-        return self;
+    public function setAPILocation($APILocation) {
+        $this->APILocation = $APILocation;
+        return $this;
     }
 
-    public static function getAPIVersion() {
-        return self::$APIVersion;
+    public function getAPIVersion() {
+        return $this->APIVersion;
     }
 
-    public static function getAPIPaths() {
-        return self::$APIPaths;
+    public function getAPIPaths() {
+        return $this->APIPaths;
     }
 
-    public static function getSelectedPath() {
-        return self::$SelectedPath;
+    public function getSelectedPath() {
+        return $this->SelectedPath;
     }
 
-    public static function setAPIVersion($APIVersion) {
-        self::$APIVersion = $APIVersion;
-        return self;
+    public function setAPIVersion($APIVersion) {
+        $this->APIVersion = $APIVersion;
+        return $this;
     }
 
-    public static function setAPIPaths($APIPaths) {
-        self::$APIPaths = $APIPaths;
-        return self;
+    public function setAPIPaths($APIPaths) {
+        $this->APIPaths = $APIPaths;
+        return $this;
     }
 
-    public static function setSelectedPath($SelectedPath) {
-        self::$SelectedPath = $SelectedPath;
-        return self;
+    public function setSelectedPath($SelectedPath) {
+        $this->SelectedPath = $SelectedPath;
+        return $this;
     }
 
-    protected static function getEndpoint() {
-        return 'https://' . self::$APILocation . self::$APIAfterLocation .
-                '/' . self::$SelectedPath . '/' . self::$APIVersion . '/';
+    protected function getEndpoint() {
+        return 'https://' . $this->APILocation . $this->APIAfterLocation .
+                '/' . $this->SelectedPath . '/' . $this->APIVersion . '/';
     }
 
-    public static function getComputerVisionAnalyzeImage() {
+    public function getComputerVisionAnalyzeImage() {
         return self::getEndpoint() . 'analyze';
     }
 
-    public static function getComputerVisionDescribeImage() {
+    public function getComputerVisionDescribeImage() {
         return self::getEndpoint() . 'describe';
     }
 
-    public static function getComputerVisionHandwrittenTextOperationResult() {
+    public function getComputerVisionHandwrittenTextOperationResult() {
         return self::getEndpoint() . 'textOperations';
     }
 
-    public static function getComputerVisionGetThumbnail() {
+    public function getComputerVisionGetThumbnail() {
         return self::getEndpoint() . 'generateThumbnail';
     }
 
-    public static function getComputerVisionListModels() {
+    public function getComputerVisionListModels() {
         return self::getEndpoint() . 'models';
     }
 
-    public static function getComputerVisionOpticalCharacterRecognition() {
+    public function getComputerVisionOpticalCharacterRecognition() {
         return self::getEndpoint() . 'ocr';
     }
 
-    public static function getComputerVisionHeader1() {
+    public function getComputerVisionHeader1() {
         return array(
-            'content-type' => self::$APIResponseContent,
-            'ocp-apim-subscription-key' => self::$APIComputerVisionKey1,
+            'content-type' => $this->APIResponseContent,
+            'ocp-apim-subscription-key' => $this->APIComputerVisionKey1,
             'accept-encoding' => 'gzip, deflate, br',
             'cache-control' => 'no-cache'
         );
     }
 
-    public static function getComputerVisionHeader2() {
+    public function getComputerVisionHeader2() {
         return array(
-            'content-type' => self::$APIResponseContent,
-            'ocp-apim-subscription-key' => self::$APIComputerVisionKey2,
+            'content-type' => $this->APIResponseContent,
+            'ocp-apim-subscription-key' => $this->APIComputerVisionKey2,
             'accept-encoding' => 'gzip, deflate, br',
             'cache-control' => 'no-cache'
         );
     }
 
-    public static function getAPIAfterLocation() {
-        return self::$APIAfterLocation;
+    public function getAPIAfterLocation() {
+        return $this->APIAfterLocation;
     }
 
-    public static function getAPIComputerVisionKey1() {
-        return self::$APIComputerVisionKey1;
+    public function getAPIComputerVisionKey1() {
+        return $this->APIComputerVisionKey1;
     }
 
-    public static function getAPIComputerVisionKey2() {
-        return self::$APIComputerVisionKey2;
+    public function getAPIComputerVisionKey2() {
+        return $this->APIComputerVisionKey2;
     }
 
-    public static function getAPIEmotionDetectKey1() {
-        return self::$APIEmotionDetectKey1;
+    public function getAPIEmotionDetectKey1() {
+        return $this->APIEmotionDetectKey1;
     }
 
-    public static function getAPIEmotionDetectKey2() {
-        return self::$APIEmotionDetectKey2;
+    public function getAPIEmotionDetectKey2() {
+        return $this->APIEmotionDetectKey2;
     }
 
-    public static function getAPIResponseContent() {
-        return self::$APIResponseContent;
+    public function getAPIResponseContent() {
+        return $this->APIResponseContent;
     }
 
-    public static function getAPILanguage() {
-        return self::$APILanguage;
+    public function getAPILanguage() {
+        return $this->APILanguage;
     }
 
-    public static function getAPIMaxRedirections() {
-        return self::$APIMaxRedirections;
+    public function getAPIMaxRedirections() {
+        return $this->APIMaxRedirections;
     }
 
-    public static function getAPITimeout() {
-        return self::$APITimeout;
+    public function getAPITimeout() {
+        return $this->APITimeout;
     }
 
-    public static function setAPIAfterLocation($APIAfterLocation) {
-        self::$APIAfterLocation = $APIAfterLocation;
-        return self;
+    public function setAPIAfterLocation($APIAfterLocation) {
+        $this->APIAfterLocation = $APIAfterLocation;
+        return $this;
     }
 
-    public static function setAPIComputerVisionKey1($APIComputerVisionKey1) {
-        self::$APIComputerVisionKey1 = $APIComputerVisionKey1;
-        return self;
+    public function setAPIComputerVisionKey1($APIComputerVisionKey1) {
+        $this->APIComputerVisionKey1 = $APIComputerVisionKey1;
+        return $this;
     }
 
-    public static function setAPIComputerVisionKey2($APIComputerVisionKey2) {
-        self::$APIComputerVisionKey2 = $APIComputerVisionKey2;
-        return self;
+    public function setAPIComputerVisionKey2($APIComputerVisionKey2) {
+        $this->APIComputerVisionKey2 = $APIComputerVisionKey2;
+        return $this;
     }
 
-    public static function setAPIEmotionDetectKey1($APIEmotionDetectKey1) {
-        self::$APIEmotionDetectKey1 = $APIEmotionDetectKey1;
-        return self;
+    public function setAPIEmotionDetectKey1($APIEmotionDetectKey1) {
+        $this->APIEmotionDetectKey1 = $APIEmotionDetectKey1;
+        return $this;
     }
 
-    public static function setAPIEmotionDetectKey2($APIEmotionDetectKey2) {
-        self::$APIEmotionDetectKey2 = $APIEmotionDetectKey2;
-        return self;
+    public function setAPIEmotionDetectKey2($APIEmotionDetectKey2) {
+        $this->APIEmotionDetectKey2 = $APIEmotionDetectKey2;
+        return $this;
     }
 
-    public static function setAPIResponseContent($APIResponseContent) {
-        self::$APIResponseContent = $APIResponseContent;
-        return self;
+    public function setAPIResponseContent($APIResponseContent) {
+        $this->APIResponseContent = $APIResponseContent;
+        return $this;
     }
 
-    public static function setAPILanguage($APILanguage) {
-        self::$APILanguage = $APILanguage;
-        return self;
+    public function setAPILanguage($APILanguage) {
+        $this->APILanguage = $APILanguage;
+        return $this;
     }
 
-    public static function setAPIMaxRedirections($APIMaxRedirections) {
-        self::$APIMaxRedirections = $APIMaxRedirections;
-        return self;
+    public function setAPIMaxRedirections($APIMaxRedirections) {
+        $this->APIMaxRedirections = $APIMaxRedirections;
+        return $this;
     }
 
-    public static function setAPITimeout($APITimeout) {
-        self::$APITimeout = $APITimeout;
-        return self;
+    public function setAPITimeout($APITimeout) {
+        $this->APITimeout = $APITimeout;
+        return $this;
     }
 
 }

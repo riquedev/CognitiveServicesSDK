@@ -12,7 +12,7 @@ namespace rqdev\packages\ComputerVisionAPI;
  *  @version 1.0.5
  * 
  */
-require_once(realpath(dirname(__FILE__)) . 'urlHelper.php');
+require_once(realpath(dirname(__FILE__)) . '\urlHelper.php');
 
 class DescribeImage extends urlHelper {
 

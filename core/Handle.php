@@ -63,7 +63,6 @@ class Handle {
 
         // Arquivo de configurações
         require_once(self::$path . "/settings.php");
-
         /*
          * Setando cURL
          */
