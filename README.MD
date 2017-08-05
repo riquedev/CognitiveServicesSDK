@@ -68,8 +68,9 @@ Todos os serviços aqui citados são oferecidos pela Microsoft e podem ser visua
 # Como Utilizar
 
 #### Índice
-[Análise de Imagem](#análise-de-imagem)
-    - [Retorno JSON](#retorno-json)
+1.0 [Análise de Imagem](#análise-de-imagem)
+
+1.1 [Retorno JSON](#retorno-json)
 
 ### Análise de Imagem
 ```php
