@@ -112,6 +112,10 @@ class urlHelper {
         return $this->getEndpoint() . 'describe';
     }
 
+    public function getEmotionRecognition() {
+        return $this->getEndpoint() . 'recognize';
+    }
+
     public function getComputerVisionTagImage() {
         return $this->getEndpoint() . 'tag';
     }
@@ -149,6 +153,24 @@ class urlHelper {
         return array(
             'content-type' => $this->APIResponseContent,
             'ocp-apim-subscription-key' => $this->APIComputerVisionKey2,
+            'accept-encoding' => 'gzip, deflate, br',
+            'cache-control' => 'no-cache'
+        );
+    }
+
+    public function getEmotionRecognitionHeader1() {
+        return array(
+            'content-type' => $this->APIResponseContent,
+            'ocp-apim-subscription-key' => $this->APIEmotionDetectKey1,
+            'accept-encoding' => 'gzip, deflate, br',
+            'cache-control' => 'no-cache'
+        );
+    }
+
+    public function getEmotionRecognitionHeader2() {
+        return array(
+            'content-type' => $this->APIResponseContent,
+            'ocp-apim-subscription-key' => $this->APIEmotionDetectKey2,
             'accept-encoding' => 'gzip, deflate, br',
             'cache-control' => 'no-cache'
         );

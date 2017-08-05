@@ -29,8 +29,7 @@ class DescribeImage extends urlHelper {
         require_once(realpath(dirname(__FILE__)) . "/settings.php");
         require_once(realpath(dirname(__FILE__)) . "/Handle.php");
         require_once(realpath(dirname(__FILE__)) . "/BaseHelper.php");
-        require_once(realpath(dirname(__FILE__)) . "/DescribeImageHelper.php");
-
+        
         // Preparando configurações da URL
         $this->Prepare();
 
