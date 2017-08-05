@@ -1,0 +1,154 @@
+{
+    "description": {
+        "tags": [
+            "outdoor",
+            "water",
+            "person",
+            "man",
+            "beach",
+            "sun",
+            "sunset",
+            "standing",
+            "holding",
+            "ocean",
+            "walking",
+            "top",
+            "woman",
+            "surfing",
+            "young",
+            "board",
+            "kite",
+            "flying",
+            "sand",
+            "wave"
+        ],
+        "captions": [
+            {
+                "text": "a man standing on a beach near a body of water",
+                "confidence": 0.95205046941961
+            },
+            {
+                "text": "a man standing on a beach",
+                "confidence": 0.95105046941961
+            },
+            {
+                "text": "a man standing on a beach with a sunset in the background",
+                "confidence": 0.95005046941961
+            },
+            {
+                "text": "a man walking across a beach next to the water",
+                "confidence": 0.94776199014565
+            },
+            {
+                "text": "a man standing on a beach next to the water",
+                "confidence": 0.94503567560856
+            },
+            {
+                "text": "a man walking across a beach next to the ocean",
+                "confidence": 0.94403567560856
+            },
+            {
+                "text": "a man standing on a beach in front of a sunset",
+                "confidence": 0.94303567560856
+            },
+            {
+                "text": "a person standing on a beach",
+                "confidence": 0.94203567560856
+            },
+            {
+                "text": "a man standing on a beach next to the ocean",
+                "confidence": 0.94103567560856
+            },
+            {
+                "text": "a man standing on a beach near the water",
+                "confidence": 0.94003567560856
+            },
+            {
+                "text": "a man that is standing on a beach",
+                "confidence": 0.93903567560856
+            },
+            {
+                "text": "a man standing on a beach near the ocean",
+                "confidence": 0.93803567560856
+            },
+            {
+                "text": "a man standing next to a beach",
+                "confidence": 0.93703567560856
+            },
+            {
+                "text": "a man walking on a beach",
+                "confidence": 0.93603567560856
+            },
+            {
+                "text": "a man standing in front of a sunset over a beach",
+                "confidence": 0.93503567560856
+            },
+            {
+                "text": "a man standing in front of a beach",
+                "confidence": 0.93403567560856
+            },
+            {
+                "text": "a man that is standing in the sand on a beach",
+                "confidence": 0.93303567560856
+            },
+            {
+                "text": "a man standing on the beach",
+                "confidence": 0.93203567560856
+            },
+            {
+                "text": "a man that is standing on the beach",
+                "confidence": 0.93103567560856
+            },
+            {
+                "text": "a man standing in front of a beach next to the water",
+                "confidence": 0.93003567560856
+            },
+            {
+                "text": "a man standing in front of a sunset",
+                "confidence": 0.92903567560856
+            },
+            {
+                "text": "a person walking on a beach",
+                "confidence": 0.92803567560856
+            },
+            {
+                "text": "a man walking on the beach",
+                "confidence": 0.92703567560856
+            },
+            {
+                "text": "a man walking down a beach",
+                "confidence": 0.92603567560856
+            },
+            {
+                "text": "a man with long hair and a sunset in the sand on a beach",
+                "confidence": 0.92503567560856
+            },
+            {
+                "text": "a man is standing on a beach",
+                "confidence": 0.92403567560856
+            },
+            {
+                "text": "a man that is standing in the sand on the beach",
+                "confidence": 0.92303567560856
+            },
+            {
+                "text": "a man standing on a beach near water",
+                "confidence": 0.92203567560856
+            },
+            {
+                "text": "a man walking down the beach",
+                "confidence": 0.92103567560856
+            },
+            {
+                "text": "a man with long hair and a sunset over a beach",
+                "confidence": 0.92003567560856
+            }
+        ]
+    },
+    "requestId": "3396e91f-bc34-438b-af32-e068e68e67a0",
+    "metadata": {
+        "width": 1920,
+        "height": 1080,
+        "format": "Jpeg"
+    }
+}
