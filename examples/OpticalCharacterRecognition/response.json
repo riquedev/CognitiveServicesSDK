@@ -1,0 +1,64 @@
+{
+    "language": "ro",
+    "textAngle": -1.2,
+    "orientation": "Up",
+    "regions": [
+        {
+            "boundingBox": "62,111,280,105",
+            "lines": [
+                {
+                    "boundingBox": "159,111,88,11",
+                    "words": [
+                        {
+                            "boundingBox": "159,111,62,11",
+                            "text": "Daoshan"
+                        },
+                        {
+                            "boundingBox": "231,111,16,11",
+                            "text": "Rd"
+                        }
+                    ]
+                },
+                {
+                    "boundingBox": "171,152,54,15",
+                    "words": [
+                        {
+                            "boundingBox": "171,152,29,15",
+                            "text": "Jipi"
+                        },
+                        {
+                            "boundingBox": "207,153,18,12",
+                            "text": "Rd"
+                        }
+                    ]
+                },
+                {
+                    "boundingBox": "62,201,92,15",
+                    "words": [
+                        {
+                            "boundingBox": "62,201,46,15",
+                            "text": "Bayiqi"
+                        },
+                        {
+                            "boundingBox": "117,201,37,12",
+                            "text": "Rd(N)"
+                        }
+                    ]
+                },
+                {
+                    "boundingBox": "246,202,96,13",
+                    "words": [
+                        {
+                            "boundingBox": "246,202,47,12",
+                            "text": "Baima"
+                        },
+                        {
+                            "boundingBox": "303,203,39,12",
+                            "text": "Rd(N)"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
