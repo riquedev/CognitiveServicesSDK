@@ -69,7 +69,7 @@ Todos os serviços aqui citados são oferecidos pela Microsoft e podem ser visua
 
 #### Índice
 [Análise de Imagem](#análise-de-imagem)
-
+    - [Retorno JSON](#retorno-json)
 
 ### Análise de Imagem
 ```php
