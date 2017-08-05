@@ -68,6 +68,7 @@ Todos os serviços aqui citados são oferecidos pela Microsoft e podem ser visua
 # Como Utilizar
 
 #### Índice
+[Análise de Imagem](#análise-de-imagem)
 
 
 ### Análise de Imagem
