@@ -76,6 +76,7 @@ Todos os serviços aqui citados são oferecidos pela Microsoft e podem ser visua
     * 3.1 [Retorno Binário](#retorno-binário)
 
 ### Análise de Imagem
+> Obtenha dados sobre o conteúdo visual da imagem.
 ```php
 // Vamos incluir o arquivo.
 require_once(realpath(dirname(__FILE__)) . "/core/AnalyzeImage.php");
@@ -220,6 +221,7 @@ if ($Analyze->Send($imageUrl)) {
 >Veja a [Documentação Oficial](https://westus.dev.cognitive.microsoft.com/docs/services/56f91f2d778daf23d8ec6739/operations/56f91f2e778daf14a499e1fa)
 
 ### Descrição de Imagem
+> Obtenha descrições sobre a imagem em linguagem legível. A descrição é baseada em tags de conteúdo, que também podem ser obtidas. Mais de uma descrição pode ser gerada, as descrições são ordenadas pelo seu índice de confiança.
 ```php
 // Vamos incluir o arquivo.
 require_once(realpath(dirname(__FILE__)) . "/core/DescribeImage.php");
