@@ -93,7 +93,7 @@ $imageUrl = 'https://www.exemplo.com/ImagemX.png';
 if ($Analyze->Send($imageUrl)) {
     // Se o envio foi um sucesso, teremos o retorno em json, então vamos transforma-lo em array
     // e mostra-lo em Dump.
-    var_dump(json_decode($img->response));
+    var_dump($img->response->toArray());
 } else {
     // Caso tenhamos algum erro...
     var_dump($img->error);
@@ -209,6 +209,48 @@ if ($Analyze->Send($imageUrl)) {
 ```
 
 >Veja a [Documentação Oficial](https://westus.dev.cognitive.microsoft.com/docs/services/56f91f2d778daf23d8ec6739/operations/56f91f2e778daf14a499e1fa)
+
+### Descrição de Imagem
+```php
+// Vamos incluir o arquivo.
+require_once(realpath(dirname(__FILE__)) . "/core/DescribeImage.php");
+
+
+// Instanciar a classe
+$Describe = new \rqdev\packages\ComputerVisionAPI\DescribeImage();
+
+// Quantos retornos deseja? (string)
+$Describe->setMaxCandidates("10");
+
+// Imagem que será analisada:
+$imageUrl = 'https://www.exemplo.com/ImagemX.png';
+/*
+    A Microsoft permite que sejam enviadas imagens por url ou dados binários (octet,form-data), porém
+    no momento só permiti o uso de url.
+*/
+
+if ($Describe->Send($imageUrl)) {
+    // Se o envio foi um sucesso, teremos o retorno em json, então vamos transforma-lo em array
+    // e mostra-lo em Dump.
+    var_dump($Describe->response->toArray());
+
+    // Obtendo Tags
+    var_dump($Describe->response->getDescriptionTags());
+
+    // Obtendo descrições
+    var_dump($Describe->response->getDescriptionCaptions());
+
+    // Obtendo ID da requisição
+    echo $Describe->response->getRequestId();
+
+    // Consulte: core\DescribeImageHelper.php
+} else {
+    // Caso tenhamos algum erro...
+    var_dump($Describe->error);
+}
+
+```
+>Veja a [Documentação Oficial](https://westus.dev.cognitive.microsoft.com/docs/services/56f91f2d778daf23d8ec6739/operations/56f91f2e778daf14a499e1fe)
 
 ### Em breve mais opções
 

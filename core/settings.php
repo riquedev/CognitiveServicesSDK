@@ -21,14 +21,14 @@ define("CVA_SSL_VERSION", CURL_SSLVERSION_DEFAULT);
  * Southeast Asia - southeastasia
  */
 
-define("CVA_API_LOCATION","westus");
+define("CVA_API_LOCATION", "westcentralus");
 
 /*
  * END POINT DA API
  */
-define("CVA_ENDPOINT","https://".CVA_API_LOCATION.".api.cognitive.microsoft.com/vision/v1.0/");
-define("CVA_COMPUTERVISION_ANALYZEIMAGE", CVA_ENDPOINT."analyze");
-define("CVA_COMPUTERVISION_DESCRIBEIMAGE",CVA_ENDPOINT."describe");
+define("CVA_ENDPOINT", "https://" . CVA_API_LOCATION . ".api.cognitive.microsoft.com/vision/v1.0/");
+define("CVA_COMPUTERVISION_ANALYZEIMAGE", CVA_ENDPOINT . "analyze");
+define("CVA_COMPUTERVISION_DESCRIBEIMAGE", CVA_ENDPOINT . "describe");
 
 /*
  * Chave da API, podem ser obtidas em:
@@ -49,7 +49,7 @@ define("CVA_CONTENT", "application/json");
  */
 define("CVA_HEADERS_COMPUTERVISION1", array(
     'content-type' => CVA_CONTENT,
-    'ocp-apim-subscription-key' => CVA_KEY_COMPUTERVISION11,
+    'ocp-apim-subscription-key' => CVA_KEY_COMPUTERVISION1,
     'accept-encoding' => 'gzip, deflate, br',
     'cache-control' => 'no-cache',
     'content-type' => 'application/json'
