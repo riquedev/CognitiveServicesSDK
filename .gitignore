@@ -2,3 +2,7 @@
 nbproject/project.xml
 *.properties
 example.php
+nbproject/private/private.xml
+doc/composer.json
+doc/composer.lock
+doc/vendor/

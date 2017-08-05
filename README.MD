@@ -6,7 +6,7 @@ Utilize os serviços Cognitivos da Microsoft de forma rápida e eficiente!
 * Os mais avançados algoritmos de processamento de imagem ajudam a moderar o conteúdo automaticamente e a criar aplicativos mais personalizados por meio do retorno de análises inteligentes sobre faces, imagens e emoções.
     - API da Pesquisa Visual Computacional
     - API de Detecção Facial
-    - Content Moderator
+    - Content Moderator 
     - API de Detecção de Emoções
     - API de vídeo
     - Serviço Personalizado de Visão
@@ -249,6 +249,41 @@ if ($Describe->Send($imageUrl)) {
     var_dump($Describe->error);
 }
 
+```
+
+## Retorno JSON:
+```json
+{
+  "description": {
+    "tags": [
+      "person",
+      "man",
+      "outdoor",
+      "window",
+      "glasses"
+    ],
+    "captions": [
+      {
+        "text": "Satya Nadella sitting on a bench",
+        "confidence": 0.48293603002174407
+      },
+      {
+        "text": "Satya Nadella is sitting on a bench",
+        "confidence": 0.40037006815422832
+      },
+      {
+        "text": "Satya Nadella sitting in front of a building",
+        "confidence": 0.38035155997373377
+      }
+    ]
+  },
+  "requestId": "ed2de1c6-fb55-4686-b0da-4da6e05d283f",
+  "metadata": {
+    "width": 1500,
+    "height": 1000,
+    "format": "Jpeg"
+  }
+}
 ```
 >Veja a [Documentação Oficial](https://westus.dev.cognitive.microsoft.com/docs/services/56f91f2d778daf23d8ec6739/operations/56f91f2e778daf14a499e1fe)
 
