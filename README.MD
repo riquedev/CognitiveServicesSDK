@@ -344,6 +344,39 @@ O retorno dessa requisição trará dados binários da imagem, o mesmo é tratad
 
 ### Modelos Disponíveis na API
 > Obtenha os modelos suportados pela API Computer Vision.
+```php
+// Instanciando Classe
+$Models = new \rqdev\packages\ComputerVisionAPI\ListDomainSpecificModels();
 
+// Enviando requisição
+if($Models->Send())
+{
+    // Se obtivermos sucesso, veremos um array com todos os models disponíveis na API.
+    var_dump($Models->response->toArray());
+}
+else
+{
+    var_dump($Models->error);
+}
+```
+### Retorno JSON:
+```json
+{
+  "models": [
+    {
+      "name": "celebrities",
+      "categories": [
+        "people_"
+      ]
+    },
+    {
+      "name": "landmarks",
+      "categories": [
+        "building_"
+      ]
+    }
+  ]
+}
+```
 ### Em breve mais opções
 
