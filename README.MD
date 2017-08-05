@@ -71,7 +71,9 @@ Todos os serviços aqui citados são oferecidos pela Microsoft e podem ser visua
 * 1.0 [Análise de Imagem](#análise-de-imagem)
     * 1.1 [Retorno JSON](#retorno-json)
 * 2.0 [Descrição de Imagem](#descrição-de-imagem)
-    * 2.1 [Retorno JSON](##retorno-json-1)
+    * 2.1 [Retorno JSON](#retorno-json-1)
+* 3.0 [Gerado de Thumbnail](#gerador-de-thumbnail)
+    * 3.1 [Retorno Binário](#retorno-binário)
 
 ### Análise de Imagem
 ```php
