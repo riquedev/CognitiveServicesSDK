@@ -79,8 +79,9 @@ Desenvolvedores que usam os Serviços Cognitivos, incluindo esta amostra,  dever
 * 3.0 [Gerador de Thumbnail](</examples/GenerateThumbnail/>)
     * 3.1 [Como Utilizar](</examples/GenerateThumbnail/index.php>)
     * 3.2 [Retorno Binário](</examples/GenerateThumbnail/download.jfif>)
-* 4.0 [Modelos Disponíveis](#modelos-disponíveis-na-api)
-    * 4.1 [Retorno JSON](#retorno-json-2)
+* 4.0 [Modelos Disponíveis](</examples/ListDomainSpecificModels/>)
+    * 4.1 [Como Utilizar](</examples/ListDomainSpecificModels/index.php>)
+    * 4.2 [Retorno JSON](</examples/ListDomainSpecificModels/response.json>)
 
 ### Em breve mais opções
 

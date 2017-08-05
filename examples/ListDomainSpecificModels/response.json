@@ -1,0 +1,18 @@
+{
+    "models": [
+        {
+            "name": "celebrities",
+            "categories": [
+                "people_"
+            ]
+        },
+        {
+            "name": "landmarks",
+            "categories": [
+                "outdoor_",
+                "building_"
+            ]
+        }
+    ],
+    "requestId": "46e1a744-b01f-4dc8-806a-62ff1ce0044d"
+}
