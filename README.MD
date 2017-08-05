@@ -73,6 +73,7 @@ Desenvolvedores que usam os Serviços Cognitivos, incluindo esta amostra,  dever
 * 1.0 [Análise de Imagem](</examples/AnalyzeImage/>)
     * 1.1 [Como Utilizar](</examples/AnalyzeImage/index.php>)
     * 1.2 [Retorno JSON](</examples/AnalyzeImage/response.json>)
+    * 1.3 [Documentação Oficial](</examples/AnalyzeImage/Documentation.xml>)
 * 2.0 [Descrição de Imagem](</examples/DescribeImage/>)
     * 2.1 [Como Utilizar](</examples/DescribeImage/index.php>)
     * 2.2 [Retorno JSON](</examples/DescribeImage/response.json>)
@@ -82,6 +83,9 @@ Desenvolvedores que usam os Serviços Cognitivos, incluindo esta amostra,  dever
 * 4.0 [Modelos Disponíveis](</examples/ListDomainSpecificModels/>)
     * 4.1 [Como Utilizar](</examples/ListDomainSpecificModels/index.php>)
     * 4.2 [Retorno JSON](</examples/ListDomainSpecificModels/response.json>)
+* 5.0 [Reconhecimento Óptico de Caracteres](</examples/OpticalCharacterRecognition/>)
+    * 5.1 [Como Utilizar](</examples/OpticalCharacterRecognition/index.php>)
+    * 5.2 [Retorno JSON](</examples/OpticalCharacterRecognition/response.json>)
 
 ### Em breve mais opções
 
