@@ -1,4 +1,4 @@
-# Cognitive Services SDK for PHP
+# Cognitive Services SDK para PHP
 [![Microsoft](http://www.lonsys.co.uk/wp-content/uploads/2016/03/microsoft-logo-300x300.jpg)](https://www.microsoft.com/)
 
 Utilize os serviços Cognitivos da Microsoft de forma rápida e eficiente!
