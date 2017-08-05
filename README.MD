@@ -72,8 +72,10 @@ Todos os serviços aqui citados são oferecidos pela Microsoft e podem ser visua
     * 1.1 [Retorno JSON](#retorno-json)
 * 2.0 [Descrição de Imagem](#descrição-de-imagem)
     * 2.1 [Retorno JSON](#retorno-json-1)
-* 3.0 [Gerado de Thumbnail](#gerador-de-thumbnail)
+* 3.0 [Gerador de Thumbnail](#gerador-de-thumbnail)
     * 3.1 [Retorno Binário](#retorno-binário)
+* 4.0 [Modelos Disponíveis](#modelos-disponíveis-na-api)
+    * 4.1 [Retorno JSON](#retorno-json-2)
 
 ### Análise de Imagem
 > Obtenha dados sobre o conteúdo visual da imagem.
@@ -111,7 +113,7 @@ if ($Analyze->Send($imageUrl)) {
 
 ```
 
-### Retorno JSON:
+#### Retorno JSON:
 ```json
 {
   "categories": [
@@ -262,7 +264,7 @@ if ($Describe->Send($imageUrl)) {
 
 ```
 
-### Retorno JSON:
+#### Retorno JSON:
 ```json
 {
   "description": {
@@ -337,7 +339,7 @@ else
 }
 
 ```
-### Retorno Binário:
+#### Retorno Binário:
 O retorno dessa requisição trará dados binários da imagem, o mesmo é tratado em toda classe Helper.
 
 >Veja a [Documentação Oficial](https://westus.dev.cognitive.microsoft.com/docs/services/56f91f2d778daf23d8ec6739/operations/56f91f2e778daf14a499e1fb)
@@ -359,7 +361,7 @@ else
     var_dump($Models->error);
 }
 ```
-### Retorno JSON:
+#### Retorno JSON:
 ```json
 {
   "models": [
