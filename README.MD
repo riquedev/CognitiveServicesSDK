@@ -70,7 +70,7 @@ Desenvolvedores que usam os Serviços Cognitivos, incluindo esta amostra,  dever
 # Como Utilizar
 
 #### Índice
-* 1.0 [Análise de Imagem](#análise-de-imagem)
+* 1.0 [Análise de Imagem](</examples/AnalyzeImage/>)
     * 1.1 [Retorno JSON](#retorno-json)
 * 2.0 [Descrição de Imagem](#descrição-de-imagem)
     * 2.1 [Retorno JSON](#retorno-json-1)
