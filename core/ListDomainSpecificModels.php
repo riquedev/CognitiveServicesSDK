@@ -14,10 +14,17 @@ namespace rqdev\packages\ComputerVisionAPI;
  */
 class ListDomainSpecificModels {
 
+    /** @var array|empty Lista de erros na requisição */
+    public $error = [];
+
+    /** @var mixed Resposta da requisição */
+    public $response = NULL;
+
     public function __construct() {
         require_once(realpath(dirname(__FILE__)) . "/settings.php");
         require_once(realpath(dirname(__FILE__)) . "/Handle2.php");
         require_once(realpath(dirname(__FILE__)) . "/BaseHelper.php");
+        require_once(realpath(dirname(__FILE__)) . "/ListDomainSpecificModelsHelper.php");
     }
 
     /**
@@ -39,7 +46,7 @@ class ListDomainSpecificModels {
             $this->error = $handle::$error;
             return false;
         } else {
-            $this->response = (new \rqdev\packages\ComputerVisionAPI\HandwrittenTextOperationResult\Helper($handle::$response));
+            $this->response = (new \rqdev\packages\ComputerVisionAPI\ListDomainSpecificModels\Helper($handle::$response));
             return true;
         }
     }

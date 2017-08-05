@@ -300,6 +300,7 @@ if ($Describe->Send($imageUrl)) {
 
 
 ### Gerador de Thumbnail
+> Esta operação gera uma imagem em miniatura com largura e altura definidas pelo usuário. Por padrão o corte inteligente é utilizado.
 ```php
 // Vamos incluir o arquivo.
 require_once(realpath(dirname(__FILE__)) . "/core/GenerateThumbnail.php");
@@ -340,6 +341,9 @@ else
 O retorno dessa requisição trará dados binários da imagem, o mesmo é tratado em toda classe Helper.
 
 >Veja a [Documentação Oficial](https://westus.dev.cognitive.microsoft.com/docs/services/56f91f2d778daf23d8ec6739/operations/56f91f2e778daf14a499e1fb)
+
+### Modelos Disponíveis na API
+> Obtenha os modelos suportados pela API Computer Vision.
 
 ### Em breve mais opções
 
