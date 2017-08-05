@@ -108,7 +108,7 @@ if ($Analyze->Send($imageUrl)) {
 
 ```
 
-## Retorno JSON:
+### Retorno JSON:
 ```json
 {
   "categories": [
@@ -258,7 +258,7 @@ if ($Describe->Send($imageUrl)) {
 
 ```
 
-## Retorno JSON:
+### Retorno JSON:
 ```json
 {
   "description": {
@@ -293,6 +293,49 @@ if ($Describe->Send($imageUrl)) {
 }
 ```
 >Veja a [Documentação Oficial](https://westus.dev.cognitive.microsoft.com/docs/services/56f91f2d778daf23d8ec6739/operations/56f91f2e778daf14a499e1fe)
+
+
+### Gerador de Thumbnail
+```php
+// Vamos incluir o arquivo.
+require_once(realpath(dirname(__FILE__)) . "/core/GenerateThumbnail.php");
+
+
+// Instanciar a classe
+$Thumbnail = new \rqdev\packages\ComputerVisionAPI\GenerateThumbnail();
+
+// Definindo Largura
+$Thumbnail->setWidth(200);
+
+// Definindo Altura
+$Thumbnail->setHeigth(200);
+
+// Usar corte inteligente?
+$Thumbnail->setSmartCropping(True);
+
+
+// Imagem que será analisada:
+$imageUrl = 'https://www.exemplo.com/ImagemX.png';
+/*
+    A Microsoft permite que sejam enviadas imagens por url ou dados binários (octet,form-data), porém
+    no momento só permiti o uso de url.
+*/
+
+if($Thumbnail->Send($imageUrl)) {
+	// Se o envio foi um sucesso, teremos o retorno em json, então vamos transforma-lo em uma imagem HTML.
+    echo $Thumbnail->response::getHtml();
+    // Todas funções disponíveis estão em: "core\GenerateThumbnailHelper.php"
+}
+else
+{
+   	var_dump($Thumbnail->error);
+}
+
+```
+### Retorno Binário:
+O retorno dessa requisição trará dados binários da imagem, o mesmo é tratado em toda classe Helper.
+
+>Veja a [Documentação Oficial](https://westus.dev.cognitive.microsoft.com/docs/services/56f91f2d778daf23d8ec6739/operations/56f91f2e778daf14a499e1fb)
 
 ### Em breve mais opções
 
