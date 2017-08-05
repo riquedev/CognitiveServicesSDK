@@ -103,6 +103,10 @@ class Helper {
         return $str;
     }
 
+    static public function getImageBinary() {
+        return self::$imageData;
+    }
+
     /**
      * @return class|anonymous Classe anônima para obter dados da imagem.
      */
