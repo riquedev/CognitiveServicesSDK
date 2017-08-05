@@ -29,9 +29,9 @@ define("CVA_API_LOCATION", "westcentralus");
 define("CVA_ENDPOINT", "https://" . CVA_API_LOCATION . ".api.cognitive.microsoft.com/vision/v1.0/");
 define("CVA_COMPUTERVISION_ANALYZEIMAGE", CVA_ENDPOINT . "analyze");
 define("CVA_COMPUTERVISION_DESCRIBEIMAGE", CVA_ENDPOINT . "describe");
-define("CVA_COMPUTERVISION_HANDWRITTEN_TEXT_OPERATION_RESULT",CVA_ENDPOINT."textOperations");
-define("CVA_COMPUTERVISION_GET_THUMBNAIL",CVA_ENDPOINT."generateThumbnail");
-define("CVA_COMPUTERVISION_LISTDOMAINSPECIFICMODELS",CVA_ENDPOINT."models");
+define("CVA_COMPUTERVISION_HANDWRITTEN_TEXT_OPERATION_RESULT", CVA_ENDPOINT . "textOperations");
+define("CVA_COMPUTERVISION_GET_THUMBNAIL", CVA_ENDPOINT . "generateThumbnail");
+define("CVA_COMPUTERVISION_LISTDOMAINSPECIFICMODELS", CVA_ENDPOINT . "models");
 
 /*
  * Chave da API, podem ser obtidas em:
@@ -96,4 +96,53 @@ define("CVA_DETAILS_CELEBRITIES", "Celebrities");
 
 define("CVA_DETAILS_LANDMARKS", "Landmarks");
 
+/**
+ * Linguagem que será utilizada no OCR.
+ * 0  => Auto Detect
+ * 1  => Chinese Simplified
+ * 2  => Chinese Traditional
+ * 3  => Czech
+ * 4  => Danish
+ * 5  => Dutch
+ * 6  => English
+ * 7  => Finnish
+ * 8  => French
+ * 9  => German
+ * 10 => Greek
+ * 11 => Hungarian
+ * 12 => Italian
+ * 13 => Japanese
+ * 14 => Korean
+ * 15 => Norwegian
+ * 16 => Polish
+ * 17 => Portuguese
+ * 18 => Russian
+ * 19 => Spanish
+ * 20 => Swedish
+ * 21 => Turkish
+ */
+define("CVA_OCR_LANGUAGE", [
+    ['AutoDetect', 'unk'],
+    ['ChineseSimplified', 'zh-Hans'],
+    ['ChineseTraditional', 'zh-Hant'],
+    ['Czech', 'cs'],
+    ['Danish', 'da'],
+    ['Dutch', 'nl'],
+    ['English', 'en'],
+    ['Finnish', 'fi'],
+    ['French', 'fr'],
+    ['German', 'de'],
+    ['Greek', 'el'],
+    ['Hungarian', 'hi'],
+    ['Italian', 'it'],
+    ['Japanese', 'Ja'],
+    ['Korean', 'ko'],
+    ['Norwegian', 'nb'],
+    ['Polish', 'pl'],
+    ['Portuguese', 'pt'],
+    ['Russian', 'ru'],
+    ['Spanish', 'es'],
+    ['Swedish', 'sv'],
+    ['Turkish', 'tr']
+]);
 
