@@ -2,17 +2,22 @@
 
 namespace rqdev\packages\ComputerVisionAPI\consts;
 
-/*
- * Qual versão do HTTP utilizaremos.
+/**
+ * Versão do HTTP utilizado
  */
 define("CVA_HTTP_VERSION", CURL_HTTP_VERSION_1_1);
 
-/*
- * Qual versão SSL vamos usar
+/**
+ * Versão do SSL
  */
 define("CVA_SSL_VERSION", CURL_SSLVERSION_DEFAULT);
 
-/*
+/**
+ * @deprecated
+ */
+define("CVA_API_LOCATION", "westcentralus");
+
+/**
  * SERVER LOCATION
  * West US - westus
  * East US 2 - eastus2
@@ -20,26 +25,76 @@ define("CVA_SSL_VERSION", CURL_SSLVERSION_DEFAULT);
  * West Europe - westeurope
  * Southeast Asia - southeastasia
  */
+define("CVA_API_LOCATION_ARRAY", [
+    'westus',
+    'eastus2',
+    'westcentralus',
+    'westeurope',
+    'southeastasia'
+        ]
+);
 
-define("CVA_API_LOCATION", "westcentralus");
 
-/*
- * END POINT DA API
+define("CVA_API_VERSION", 'v1.0');
+define("CVA_AFTER_LOCATION", '.api.cognitive.microsoft.com');
+define("CVA_API_PATHS", ['vision', 'emotion']);
+
+/**
+ * Endpoint principal
+ * @deprecated 
  */
 define("CVA_ENDPOINT", "https://" . CVA_API_LOCATION . ".api.cognitive.microsoft.com/vision/v1.0/");
+
+/**
+ * Endpoint - Análise de Imagens
+ */
 define("CVA_COMPUTERVISION_ANALYZEIMAGE", CVA_ENDPOINT . "analyze");
+
+/**
+ * Endpoint - Descrever Imagens
+ */
 define("CVA_COMPUTERVISION_DESCRIBEIMAGE", CVA_ENDPOINT . "describe");
+
+/**
+ * Endpoint - Resultado de Operação
+ */
 define("CVA_COMPUTERVISION_HANDWRITTEN_TEXT_OPERATION_RESULT", CVA_ENDPOINT . "textOperations");
+
+/**
+ * Endpoint - Gerar Thumbnail
+ */
 define("CVA_COMPUTERVISION_GET_THUMBNAIL", CVA_ENDPOINT . "generateThumbnail");
+
+/**
+ * Endpoint - Obter modelos da API
+ */
 define("CVA_COMPUTERVISION_LISTDOMAINSPECIFICMODELS", CVA_ENDPOINT . "models");
 
-/*
- * Chave da API, podem ser obtidas em:
- * ( Computer Vision )
+/**
+ * Endpoint - Reconhecimento
+ */
+define("CVA_COMPUTERVISION_OPTICAL_CHARACTER_RECOGNITION", CVA_ENDPOINT . "ocr");
+
+/**
+ * API da Pesquisa Visual Computacional - Chave 1
  */
 define("CVA_KEY_COMPUTERVISION1", "2b52efb5378e4bfb9dac2f1d0b806072");
 
+/**
+ * API da Pesquisa Visual Computacional - Chave 2
+ */
 define("CVA_KEY_COMPUTERVISION2", "685a641c1cfd4d3780a20b12e306e464");
+
+/**
+ * API de Detecção de Emoções - Chave 1
+ */
+define("CVA_KEY_EMOTIONDETECT1", "bb7b062e15d64c4597f9037d159a3b9e");
+
+/**
+ * API de Detecção de Emoções - Chave 2
+ */
+define("CVA_KEY_EMOTIONDETECT2", "91b3337c23b7417dbd3fb038c4af440d");
+
 
 /*
  * Retorno

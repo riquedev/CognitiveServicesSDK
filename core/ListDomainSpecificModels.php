@@ -12,7 +12,9 @@ namespace rqdev\packages\ComputerVisionAPI;
  *  @version 1.0.5
  * 
  */
-class ListDomainSpecificModels {
+require_once(realpath(dirname(__FILE__)) . 'urlHelper.php');
+
+class ListDomainSpecificModels extends urlHelper {
 
     /** @var array|empty Lista de erros na requisição */
     public $error = [];
@@ -25,19 +27,30 @@ class ListDomainSpecificModels {
         require_once(realpath(dirname(__FILE__)) . "/Handle2.php");
         require_once(realpath(dirname(__FILE__)) . "/BaseHelper.php");
         require_once(realpath(dirname(__FILE__)) . "/ListDomainSpecificModelsHelper.php");
+        // Preparando configurações da URL
+        $this->Prepare();
+
+        // Selecionando Path da API
+        $this->setSelectedPath(CVA_API_PATHS[0]);
     }
 
     /**
      * Faz a requisição ao servidor.
-     * @param string $imageUrl Link da imagem que será analisada.
+     * @param boolean $useMainHeader Usar a Header principal
      * @return boolean Sucesso
      */
-    public function Send() {
-        $endPoint = CVA_COMPUTERVISION_LISTDOMAINSPECIFICMODELS;
+    public function Send(bool $useMainHeader = true) {
+        $endPoint = $this->getComputerVisionListModels();
         $headers = [];
 
-        foreach (CVA_HEADERS_COMPUTERVISION1 as $key => $value) {
-            $headers[] = $key . ":" . $value;
+        if ($useMainHeader) {
+            foreach ($this->getComputerVisionHeader1() as $key => $value) {
+                $headers[] = $key . ":" . $value;
+            }
+        } else {
+            foreach ($this->getComputerVisionHeader2() as $key => $value) {
+                $headers[] = $key . ":" . $value;
+            }
         }
 
         $handle = new Handle2($endPoint, $headers);

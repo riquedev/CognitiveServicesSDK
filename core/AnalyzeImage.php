@@ -12,7 +12,9 @@ namespace rqdev\packages\ComputerVisionAPI;
  *  @version 1.0.5
  * 
  */
-class AnalyzeImage {
+require_once(realpath(dirname(__FILE__)) . 'urlHelper.php');
+
+class AnalyzeImage extends urlHelper {
 
     /** @var array|empty Características visuais */
     private $visualFeatures = [];
@@ -34,6 +36,12 @@ class AnalyzeImage {
         require_once(realpath(dirname(__FILE__)) . "/Handle.php");
         require_once(realpath(dirname(__FILE__)) . "/BaseHelper.php");
         require_once(realpath(dirname(__FILE__)) . "/AnalyzeImageHelper.php");
+
+        // Preparando configurações da URL
+        $this->Prepare();
+
+        // Selecionando Path da API
+        $this->setSelectedPath(CVA_API_PATHS[0]);
     }
 
     /**
@@ -93,15 +101,23 @@ class AnalyzeImage {
     /**
      * Faz a requisição ao servidor.
      * @param string $imageUrl Link da imagem que será analisada.
+     * @param boolean $useMainHeader Usar a Header principal
      * @return boolean Sucesso
      */
-    public function Send(string $imageUrl) {
-        $endPoint = CVA_COMPUTERVISION_ANALYZEIMAGE . '?details=' . implode(",", $this->details) . "&visualFeatures=" . implode(",", $this->visualFeatures);
+    public function Send(string $imageUrl, bool $useMainHeader = true) {
+
+        $endPoint = $this->getComputerVisionAnalyzeImage() . '?details=' . implode(",", $this->details) . "&visualFeatures=" . implode(",", $this->visualFeatures);
         $endPoint .= "&language=" . $this->language;
         $headers = [];
 
-        foreach (CVA_HEADERS_COMPUTERVISION1 as $key => $value) {
-            $headers[] = $key . ":" . $value;
+        if ($useMainHeader) {
+            foreach ($this->getComputerVisionHeader1() as $key => $value) {
+                $headers[] = $key . ":" . $value;
+            }
+        } else {
+            foreach ($this->getComputerVisionHeader2() as $key => $value) {
+                $headers[] = $key . ":" . $value;
+            }
         }
 
         $handle = new Handle($endPoint, $imageUrl, $headers);

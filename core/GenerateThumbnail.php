@@ -12,7 +12,9 @@ namespace rqdev\packages\ComputerVisionAPI;
  *  @version 1.0.5
  * 
  */
-class GenerateThumbnail {
+require_once(realpath(dirname(__FILE__)) . 'urlHelper.php');
+
+class GenerateThumbnail extends urlHelper {
 
     /**
      * @var integer Largura da thumbnail
@@ -40,6 +42,12 @@ class GenerateThumbnail {
         require_once(realpath(dirname(__FILE__)) . "/Handle.php");
         require_once(realpath(dirname(__FILE__)) . "/BaseHelper.php");
         require_once(realpath(dirname(__FILE__)) . "/GenerateThumbnailHelper.php");
+
+        // Preparando configurações da URL
+        $this->Prepare();
+
+        // Selecionando Path da API
+        $this->setSelectedPath(CVA_API_PATHS[0]);
     }
 
     /**
@@ -93,18 +101,25 @@ class GenerateThumbnail {
     /**
      * Faz a requisição ao servidor.
      * @param string $imageUrl Link da imagem que será analisada.
+     * @param boolean $useMainHeader Usar a Header principal
      * @return boolean Sucesso
      */
-    public function Send(string $imageUrl) {
-        $endPoint = CVA_COMPUTERVISION_GET_THUMBNAIL . '?width=' .
+    public function Send(string $imageUrl, bool $useMainHeader = true) {
+        $endPoint = $this->getComputerVisionGetThumbnail() . '?width=' .
                 $this->getWidth() .
                 '&height=' . $this->getHeight() .
                 '&smartCropping=' . strval($this->getSmartCropping());
 
         $headers = [];
 
-        foreach (CVA_HEADERS_COMPUTERVISION1 as $key => $value) {
-            $headers[] = $key . ":" . $value;
+        if ($useMainHeader) {
+            foreach ($this->getComputerVisionHeader1() as $key => $value) {
+                $headers[] = $key . ":" . $value;
+            }
+        } else {
+            foreach ($this->getComputerVisionHeader2() as $key => $value) {
+                $headers[] = $key . ":" . $value;
+            }
         }
 
         $handle = new Handle($endPoint, $imageUrl, $headers);

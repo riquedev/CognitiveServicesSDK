@@ -2,34 +2,24 @@
 
 namespace rqdev\packages\ComputerVisionAPI;
 
-/**
- *  Esta classe tem o objetivo de trabalhar com a leitura de imagens feita pela
- *  api.
- * 
- *  @author Henrique da Silva Santos < rique_dev@hotmail.com >
- *  @copyright (c) 2017, Henrique da Silva Santos
- *  @license https://opensource.org/licenses/MIT
- *  @version 1.0.5
- * 
- */
 require_once(realpath(dirname(__FILE__)) . 'urlHelper.php');
 
-class DescribeImage extends urlHelper {
-
-    /** @var string Máximo de descrições no retorno. */
-    private $maxCandidates = "1";
+class OpticalCharacterRecognition extends urlHelper {
 
     /** @var array|empty Lista de erros na requisição */
     public $error = [];
 
     /** @var mixed Resposta da requisição */
     public $response = NULL;
+    private $language = null;
+    private $detectOrientation = true;
 
     public function __construct() {
         require_once(realpath(dirname(__FILE__)) . "/settings.php");
         require_once(realpath(dirname(__FILE__)) . "/Handle.php");
         require_once(realpath(dirname(__FILE__)) . "/BaseHelper.php");
-        require_once(realpath(dirname(__FILE__)) . "/DescribeImageHelper.php");
+        require_once(realpath(dirname(__FILE__)) . "/OpticalCharacterRecognitionHelper.php");
+        $this->setLanguage(CVA_OCR_LANGUAGE[0][1]);
 
         // Preparando configurações da URL
         $this->Prepare();
@@ -38,33 +28,29 @@ class DescribeImage extends urlHelper {
         $this->setSelectedPath(CVA_API_PATHS[0]);
     }
 
-    /**
-     * Retorna o total de descrições pedidas no retorno.
-     * @return string
-     */
-    public function getMaxCandidates() {
-        return $this->maxCandidates;
+    public function getLanguage() {
+        return $this->language;
     }
 
-    /**
-     * Insere o máximo de descrições no retorno.
-     * @param string $maxCandidates
-     * @return $this
-     */
-    public function setMaxCandidates(string $maxCandidates) {
-        $this->maxCandidates = $maxCandidates;
+    public function setLanguage(string $language) {
+        $this->language = (string) $language;
         return $this;
     }
 
-    /**
-     * Faz a requisição ao servidor.
-     * @param string $imageUrl Link da imagem que será analisada.
-     * @param boolean $useMainHeader Usar a Header principal
-     * @return boolean Sucesso
-     */
-    public function Send(string $imageUrl, bool $useMainHeader = true) {
+    public function getDetectOrientation() {
+        return $this->detectOrientation;
+    }
 
-        $endPoint = $this->getComputerVisionDescribeImage() . '?maxCandidates=' . $this->getMaxCandidates();
+    public function setDetectOrientation(bool $detectOrientation) {
+        $this->detectOrientation = (bool) $detectOrientation;
+        return $this;
+    }
+
+    public function Send(string $imageUrl, bool $useMainHeader = true) {
+        $endPoint = $this->getComputerVisionOpticalCharacterRecognition() .
+                '?language=' . $this->getLanguage() .
+                '&detectOrientation=' . strval($this->getDetectOrientation());
+
 
         $headers = [];
 
@@ -84,7 +70,7 @@ class DescribeImage extends urlHelper {
             $this->error = $handle::$error;
             return false;
         } else {
-            $this->response = (new DescribeImage\Helper($handle::$response));
+            $this->response = (new \rqdev\packages\ComputerVisionAPI\OpticalCharacterRecognition\Helper($handle::$response));
             return true;
         }
     }

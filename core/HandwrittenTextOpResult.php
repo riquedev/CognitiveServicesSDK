@@ -5,8 +5,9 @@ namespace rqdev\packages\ComputerVisionAPI;
 /*
  *  Não finalizada.
  */
+require_once(realpath(dirname(__FILE__)) . 'urlHelper.php');
 
-class HandwrittenTextOperationResult {
+class HandwrittenTextOperationResult extends urlHelper {
 
     private $operationId;
 
@@ -24,14 +25,31 @@ class HandwrittenTextOperationResult {
         require_once(realpath(dirname(__FILE__)) . "/Handle2.php");
         require_once(realpath(dirname(__FILE__)) . "/BaseHelper.php");
         require_once(realpath(dirname(__FILE__)) . "/HTOPHelper.php");
+
+        // Preparando configurações da URL
+        $this->Prepare();
+
+        // Selecionando Path da API
+        $this->setSelectedPath(CVA_API_PATHS[0]);
     }
 
-    public function Send() {
-        $endPoint = CVA_COMPUTERVISION_HANDWRITTEN_TEXT_OPERATION_RESULT . '/' . $this->getOperationId();
+    /**
+     * Faz a requisição ao servidor.
+     * @param boolean $useMainHeader Usar a Header principal
+     * @return boolean Sucesso
+     */
+    public function Send(bool $useMainHeader = true) {
+        $endPoint = $this->getComputerVisionHandwrittenTextOperationResult() . '/' . $this->getOperationId();
         $headers = [];
 
-        foreach (CVA_HEADERS_COMPUTERVISION1 as $key => $value) {
-            $headers[] = $key . ":" . $value;
+        if ($useMainHeader) {
+            foreach ($this->getComputerVisionHeader1() as $key => $value) {
+                $headers[] = $key . ":" . $value;
+            }
+        } else {
+            foreach ($this->getComputerVisionHeader2() as $key => $value) {
+                $headers[] = $key . ":" . $value;
+            }
         }
 
         $handle = new Handle2($endPoint, $headers);
