@@ -1,4 +1,4 @@
-# Computer Vision API
+# Cognitive Services SDK for PHP
 [![Microsoft](http://www.lonsys.co.uk/wp-content/uploads/2016/03/microsoft-logo-300x300.jpg)](https://www.microsoft.com/)
 
 Utilize os serviços Cognitivos da Microsoft de forma rápida e eficiente!
@@ -66,6 +66,10 @@ Todos os serviços aqui citados são oferecidos pela Microsoft e podem ser visua
 
 
 # Como Utilizar
+
+#### Índice
+
+
 ### Análise de Imagem
 ```php
 // Vamos incluir o arquivo.
