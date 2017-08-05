@@ -29,6 +29,8 @@ define("CVA_API_LOCATION", "westcentralus");
 define("CVA_ENDPOINT", "https://" . CVA_API_LOCATION . ".api.cognitive.microsoft.com/vision/v1.0/");
 define("CVA_COMPUTERVISION_ANALYZEIMAGE", CVA_ENDPOINT . "analyze");
 define("CVA_COMPUTERVISION_DESCRIBEIMAGE", CVA_ENDPOINT . "describe");
+define("CVA_COMPUTERVISION_HANDWRITTEN_TEXT_OPERATION_RESULT",CVA_ENDPOINT."textOperations");
+define("CVA_COMPUTERVISION_GET_THUMBNAIL",CVA_ENDPOINT."generateThumbnail");
 
 /*
  * Chave da API, podem ser obtidas em:

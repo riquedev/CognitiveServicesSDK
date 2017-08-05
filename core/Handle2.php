@@ -4,7 +4,7 @@ namespace rqdev\packages\ComputerVisionAPI;
 
 /**
  *  Esta classe tem o objetivo de trabalhar com a leitura de imagens feita pela
- *  api. (Específica para método POST)
+ *  api. (Específica para método GET)
  * 
  *  @author Henrique da Silva Santos < rique_dev@hotmail.com >
  *  @copyright (c) 2017, Henrique da Silva Santos
@@ -12,7 +12,7 @@ namespace rqdev\packages\ComputerVisionAPI;
  *  @version 1.0.5
  *  @api
  */
-class Handle {
+class Handle2 {
 
     /**
      * cURL
@@ -56,7 +56,7 @@ class Handle {
      * @param string $file_url URL da imagem.
      * @param array $header Header da conexão.
      */
-    public function __construct(string $url, string $file_url, array $header) {
+    public function __construct(string $url, array $header) {
 
         // Path atual
         self::$path = realpath(dirname(__FILE__));
@@ -75,8 +75,7 @@ class Handle {
         self::$setopt[CURLOPT_TIMEOUT] = CVA_TIMEOUT;
         self::$setopt[CURLOPT_HTTP_VERSION] = CVA_HTTP_VERSION;
         //self::$setopt[CURLOPT_SSLVERSION] = CVA_SSL_VERSION;
-        self::$setopt[CURLOPT_CUSTOMREQUEST] = "POST";
-        self::$setopt[CURLOPT_POSTFIELDS] = json_encode(['url' => $file_url]);
+        self::$setopt[CURLOPT_CUSTOMREQUEST] = "GET";
         self::$setopt[CURLOPT_HTTPHEADER] = $header;
         //self::$setopt[CURLOPT_SSL_VERIFYHOST] = 1;
         //self::$setopt[CURLOPT_SSL_VERIFYPEER] = 2;

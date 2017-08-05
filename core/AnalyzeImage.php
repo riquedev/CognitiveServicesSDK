@@ -65,7 +65,7 @@ class AnalyzeImage {
      * @param mixed $details Detalhes. ( encontrados em core\settings.php )
      * @return $this
      */
-    public function setDetails($details) {
+    public function setDetails(array $details) {
         $this->details = $details;
         return $this;
     }
@@ -75,7 +75,7 @@ class AnalyzeImage {
      * @param string $language Ex.: en
      * @return $this
      */
-    public function setLanguage($language) {
+    public function setLanguage(string $language) {
         $this->language = $language;
         return $this;
     }
