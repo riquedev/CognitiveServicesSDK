@@ -65,7 +65,7 @@ Todos os serviços aqui citados são oferecidos pela Microsoft e podem ser visua
     - Atualmente só implementamos a análise de imagem.
 
 # Código de Conduta
-Desenvolvedores que usam os Serviços Cognitivos, incluindo esta amostra,  deverão seguir o código de conduta do "Developer Code of Conduct for Microsoft Cognitive Services", que pode ser encontrado em: (http://go.microsoft.com/fwlink/?LinkId=698895)[http://go.microsoft.com/fwlink/?LinkId=698895].
+Desenvolvedores que usam os Serviços Cognitivos, incluindo esta amostra,  deverão seguir o código de conduta do "Developer Code of Conduct for Microsoft Cognitive Services", que pode ser encontrado em: [http://go.microsoft.com/fwlink/?LinkId=698895](http://go.microsoft.com/fwlink/?LinkId=698895).
 
 # Como Utilizar
 
