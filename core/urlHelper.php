@@ -105,27 +105,35 @@ class urlHelper {
     }
 
     public function getComputerVisionAnalyzeImage() {
-        return self::getEndpoint() . 'analyze';
+        return $this->getEndpoint() . 'analyze';
     }
 
     public function getComputerVisionDescribeImage() {
-        return self::getEndpoint() . 'describe';
+        return $this->getEndpoint() . 'describe';
+    }
+
+    public function getComputerVisionTagImage() {
+        return $this->getEndpoint() . 'tag';
     }
 
     public function getComputerVisionHandwrittenTextOperationResult() {
-        return self::getEndpoint() . 'textOperations';
+        return $this->getEndpoint() . 'textOperations';
     }
 
     public function getComputerVisionGetThumbnail() {
-        return self::getEndpoint() . 'generateThumbnail';
+        return $this->getEndpoint() . 'generateThumbnail';
     }
 
     public function getComputerVisionListModels() {
-        return self::getEndpoint() . 'models';
+        return $this->getEndpoint() . 'models';
     }
 
     public function getComputerVisionOpticalCharacterRecognition() {
-        return self::getEndpoint() . 'ocr';
+        return $this->getEndpoint() . 'ocr';
+    }
+
+    public function getComputerVisionRecognizeDomainSpecificContent() {
+        return $this->getEndpoint() . 'models';
     }
 
     public function getComputerVisionHeader1() {

@@ -85,6 +85,12 @@ Desenvolvedores que usam os Serviços Cognitivos, incluindo esta amostra,  dever
 * 5.0 [Reconhecimento Óptico de Caracteres](</examples/OpticalCharacterRecognition/>)
     * 5.1 [Como Utilizar](</examples/OpticalCharacterRecognition/index.php>)
     * 5.2 [Retorno JSON](</examples/OpticalCharacterRecognition/response.json>)
+* 6.0 [Reconhecimento de Conteúdo Específico](</examples/RecognizeDomainSpecificContent/>)
+    * 6.1 [Como Utilizar](</examples/RecognizeDomainSpecificContent/index.php>)
+    * 6.2 [Retorno JSON](</examples/RecognizeDomainSpecificContent/response.json>)
+* 7.0 [Tag Image] (</examples/TagImage/>)
+    * 7.1 [Como Utilizar] (</examples/TagImage/index.php>)
+    * 7.2 [Retorno JSON] (</examples/TagImage/response.json>)
 
 ### Em breve mais opções
 

@@ -1,0 +1,22 @@
+{
+    "requestId": "5203a33a-200c-482a-a43b-4f12b353ce49",
+    "metadata": {
+        "width": 662,
+        "height": 420,
+        "format": "Jpeg"
+    },
+    "result": {
+        "celebrities": [
+            {
+                "name": "Arnold Schwarzenegger",
+                "faceRectangle": {
+                    "left": 239,
+                    "top": 118,
+                    "width": 179,
+                    "height": 179
+                },
+                "confidence": 0.999996543
+            }
+        ]
+    }
+}

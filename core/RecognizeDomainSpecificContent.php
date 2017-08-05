@@ -4,52 +4,38 @@ namespace rqdev\packages\ComputerVisionAPI;
 
 require_once(realpath(dirname(__FILE__)) . '\urlHelper.php');
 
-class OpticalCharacterRecognition extends urlHelper {
+class RecognizeDomainSpecificContent extends urlHelper {
 
-    /** @var array|empty Lista de erros na requisição */
-    public $error = [];
-
-    /** @var mixed Resposta da requisição */
-    public $response = NULL;
-    private $language = null;
-    private $detectOrientation = true;
+    private $model;
 
     public function __construct() {
         require_once(realpath(dirname(__FILE__)) . "/settings.php");
         require_once(realpath(dirname(__FILE__)) . "/Handle.php");
         require_once(realpath(dirname(__FILE__)) . "/BaseHelper.php");
-        require_once(realpath(dirname(__FILE__)) . "/OpticalCharacterRecognitionHelper.php");
-        $this->setLanguage(CVA_OCR_LANGUAGE[0][1]);
+        require_once(realpath(dirname(__FILE__)) . "/RecognizeDomainSpecificContentHelper.php");
 
         // Preparando configurações da URL
         $this->Prepare();
 
         // Selecionando Path da API
         $this->setSelectedPath(CVA_API_PATHS[0]);
+
+        $this->setModel(CVA_RECOGNIZEDOMAINSPECIFICCONTENT_CELEBRITIES);
     }
 
-    public function getLanguage() {
-        return $this->language;
+    public function getModel() {
+        return $this->model;
     }
 
-    public function setLanguage(string $language) {
-        $this->language = (string) $language;
-        return $this;
-    }
-
-    public function getDetectOrientation() {
-        return $this->detectOrientation;
-    }
-
-    public function setDetectOrientation(bool $detectOrientation) {
-        $this->detectOrientation = (bool) $detectOrientation;
+    public function setModel(string $model) {
+        $this->model = $model;
         return $this;
     }
 
     public function Send(string $imageUrl, bool $useMainHeader = true) {
-        $endPoint = $this->getComputerVisionOpticalCharacterRecognition() .
-                '?language=' . $this->getLanguage() .
-                '&detectOrientation=' . strval($this->getDetectOrientation());
+        $endPoint = $this->getComputerVisionRecognizeDomainSpecificContent() .
+                '/' . $this->getModel() . '/analyze';
+
         $headers = [];
 
         if ($useMainHeader) {
@@ -68,7 +54,7 @@ class OpticalCharacterRecognition extends urlHelper {
             $this->error = $handle::$error;
             return false;
         } else {
-            $this->response = (new \rqdev\packages\ComputerVisionAPI\OpticalCharacterRecognition\Helper($handle::$response));
+            $this->response = (new RecognizeDomainSpecificContent\Helper($handle::$response));
             return true;
         }
     }

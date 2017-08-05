@@ -151,6 +151,10 @@ define("CVA_DETAILS_CELEBRITIES", "Celebrities");
 
 define("CVA_DETAILS_LANDMARKS", "Landmarks");
 
+define("CVA_RECOGNIZEDOMAINSPECIFICCONTENT_CELEBRITIES", 'celebrities');
+
+define("CVA_RECOGNIZEDOMAINSPECIFICCONTENT_LANDMARKS", 'landmarks');
+
 /**
  * Linguagem que será utilizada no OCR.
  * 0  => Auto Detect

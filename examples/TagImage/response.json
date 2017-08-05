@@ -1,0 +1,40 @@
+{
+    "tags": [
+        {
+            "name": "grass",
+            "confidence": 0.99999988079071
+        },
+        {
+            "name": "outdoor",
+            "confidence": 0.99919039011002
+        },
+        {
+            "name": "sport",
+            "confidence": 0.98720526695251
+        },
+        {
+            "name": "athletic game",
+            "confidence": 0.98144745826721,
+            "hint": "sport"
+        },
+        {
+            "name": "person",
+            "confidence": 0.96853011846542
+        },
+        {
+            "name": "golf",
+            "confidence": 0.96228677034378,
+            "hint": "sport"
+        },
+        {
+            "name": "field",
+            "confidence": 0.88344407081604
+        }
+    ],
+    "requestId": "7be961ca-0ab2-472e-a18b-4de95b53f698",
+    "metadata": {
+        "width": 456,
+        "height": 259,
+        "format": "Jpeg"
+    }
+}
