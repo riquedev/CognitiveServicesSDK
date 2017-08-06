@@ -172,7 +172,7 @@ class GenerateThumbnail extends urlHelper {
     }
 
     /**
-     * @return \rqdev\packages\ComputerVisionAPI\GenerateThumbnail\HelperResposta da requisição.
+     * @return \rqdev\packages\ComputerVisionAPI\GenerateThumbnail\Helper Resposta da requisição.
      */
     public function getResponse() {
         return $this->response;

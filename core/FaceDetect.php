@@ -162,11 +162,11 @@ class FaceDetect extends \rqdev\packages\ComputerVisionAPI\urlHelper {
     protected function buildHeaders(bool $useMainHeader) {
         $headers = [];
         if ($useMainHeader) {
-            foreach ($this->getComputerVisionHeader1() as $key => $value) {
+            foreach ($this->getFaceAPIHeader1() as $key => $value) {
                 $headers[] = $key . ":" . $value;
             }
         } else {
-            foreach ($this->getComputerVisionHeader2() as $key => $value) {
+            foreach ($this->getFaceAPIHeader2() as $key => $value) {
                 $headers[] = $key . ":" . $value;
             }
         }
@@ -202,7 +202,7 @@ class FaceDetect extends \rqdev\packages\ComputerVisionAPI\urlHelper {
      * @param \rqdev\packages\FaceAPI\FaceDetect\Helper $response
      * @return $this
      */
-    private function setResponse(\rqdev\packages\FaceAPI\FaceDetect\Helperr $response) {
+    private function setResponse(\rqdev\rqdev\packages\FaceAPI\FaceDetect\Helper $response) {
         $this->response = $response;
         return $this;
     }

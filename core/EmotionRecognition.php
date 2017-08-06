@@ -77,11 +77,11 @@ class EmotionRecognition extends \rqdev\packages\ComputerVisionAPI\urlHelper {
     protected function buildHeaders(bool $useMainHeader) {
         $headers = [];
         if ($useMainHeader) {
-            foreach ($this->getComputerVisionHeader1() as $key => $value) {
+            foreach ($this->getEmotionRecognitionHeader1() as $key => $value) {
                 $headers[] = $key . ":" . $value;
             }
         } else {
-            foreach ($this->getComputerVisionHeader2() as $key => $value) {
+            foreach ($this->getEmotionRecognitionHeader2() as $key => $value) {
                 $headers[] = $key . ":" . $value;
             }
         }

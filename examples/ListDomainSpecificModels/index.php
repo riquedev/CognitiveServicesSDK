@@ -1,7 +1,13 @@
 <?php
 
+/*
+ *  Header que será utilizado.
+ */
 header("Content-type:application/json");
-// ../../..
+
+/*
+ * Obtendo o Path principal
+ */
 $MainPath = realpath(dirname(dirname(dirname(__FILE__))));
 
 // Incluindo arquivo correspondente a classe.
@@ -18,13 +24,13 @@ $useMainHeader = True;
 // Instanciando classe...
 $Analyze = new \rqdev\packages\ComputerVisionAPI\ListDomainSpecificModels();
 
-$Sucess = $Analyze->setAPILocation(
-                $RequestLocation[2]
-        )->Send($useMainHeader);
+$Sucess = $Analyze
+        ->setAPILocation($RequestLocation[2])
+        ->Send($useMainHeader);
 
 if ($Sucess) {
     // Resposta
-    $ResponseObject = $Analyze->response;
+    $ResponseObject = $Analyze->getResponse();
 
     // Pretty-Print
     $prettyJson = true;
@@ -41,7 +47,7 @@ if ($Sucess) {
     // Resposta JSON
     echo $JsonResponse;
 } else {
-    var_dump($Analyze->error);
+    var_dump($Analyze->getError());
 }
 
 
