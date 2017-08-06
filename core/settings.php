@@ -37,7 +37,7 @@ define("CVA_API_LOCATION_ARRAY", [
 
 define("CVA_API_VERSION", 'v1.0');
 define("CVA_AFTER_LOCATION", '.api.cognitive.microsoft.com');
-define("CVA_API_PATHS", ['vision', 'emotion']);
+define("CVA_API_PATHS", ['vision', 'emotion', 'face']);
 
 /**
  * Endpoint principal
@@ -95,6 +95,14 @@ define("CVA_KEY_EMOTIONDETECT1", "bb7b062e15d64c4597f9037d159a3b9e");
  */
 define("CVA_KEY_EMOTIONDETECT2", "91b3337c23b7417dbd3fb038c4af440d");
 
+/**
+ * Face API - Chave 1
+ */
+define("CVA_KEY_FACEAPI1", 'cce14dbfcf624afeae16fd2800505bed');
+/**
+ * Face API - Chave 2
+ */
+define("CVA_KEY_FACEAPI2", '0ba31e5759ae419da346f14ec368a5e2');
 
 /*
  * Retorno
@@ -154,6 +162,34 @@ define("CVA_DETAILS_LANDMARKS", "Landmarks");
 define("CVA_RECOGNIZEDOMAINSPECIFICCONTENT_CELEBRITIES", 'celebrities');
 
 define("CVA_RECOGNIZEDOMAINSPECIFICCONTENT_LANDMARKS", 'landmarks');
+
+define("CVA_FACEDETECT_ATTRIBUTE_AGE", 'age');
+
+define("CVA_FACEDETECT_ATTRIBUTE_GENDER", 'GENDER');
+
+define("CVA_FACEDETECT_ATTRIBUTE_HEADPOSE", 'headPose');
+
+define("CVA_FACEDETECT_ATTRIBUTE_SMILE", 'smile');
+
+define("CVA_FACEDETECT_ATTRIBUTE_FACIAL_HAIR", 'facialHair');
+
+define("CVA_FACEDETECT_ATTRIBUTE_GLASSES", 'glasses');
+
+define("CVA_FACEDETECT_ATTRIBUTE_EMOTION", 'emotion');
+
+define("CVA_FACEDETECT_ATTRIBUTE_HAIR", 'hair');
+
+define("CVA_FACEDETECT_ATTRIBUTE_MAKEUP", 'makeup');
+
+define("CVA_FACEDETECT_ATTRIBUTE_OCCLUSION", 'occlusion');
+
+define("CVA_FACEDETECT_ATTRIBUTE_ACCESSORIES", 'accessories');
+
+define("CVA_FACEDETECT_ATTRIBUTE_BLUR", 'blur');
+
+define("CVA_FACEDETECT_ATTRIBUTE_EXPOSURE", 'exposure');
+
+define("CVA_FACEDETECT_ATTRIBUTE_NOISE", 'noise');
 
 /**
  * Linguagem que será utilizada no OCR.

@@ -16,6 +16,8 @@ class urlHelper {
     private $APIComputerVisionKey2;
     private $APIEmotionDetectKey1;
     private $APIEmotionDetectKey2;
+    private $APIFaceKey1;
+    private $APIFaceKey2;
     private $APIResponseContent;
     private $APILanguage;
     private $APIMaxRedirections;
@@ -35,6 +37,8 @@ class urlHelper {
         $this->APIComputerVisionKey2 = CVA_KEY_COMPUTERVISION2;
         $this->APIEmotionDetectKey1 = CVA_KEY_EMOTIONDETECT1;
         $this->APIEmotionDetectKey2 = CVA_KEY_EMOTIONDETECT2;
+        $this->APIFaceKey1 = CVA_KEY_FACEAPI1;
+        $this->APIFaceKey2 = CVA_KEY_FACEAPI2;
         $this->APIResponseContent = CVA_CONTENT;
         $this->APILanguage = CVA_LANGUAGE;
         $this->APIMaxRedirections = CVA_MAX_REDIRS;
@@ -116,6 +120,10 @@ class urlHelper {
         return $this->getEndpoint() . 'recognize';
     }
 
+    public function getFaceDetect() {
+        return $this->getEndpoint() . 'detect';
+    }
+
     public function getComputerVisionTagImage() {
         return $this->getEndpoint() . 'tag';
     }
@@ -171,6 +179,24 @@ class urlHelper {
         return array(
             'content-type' => $this->APIResponseContent,
             'ocp-apim-subscription-key' => $this->APIEmotionDetectKey2,
+            'accept-encoding' => 'gzip, deflate, br',
+            'cache-control' => 'no-cache'
+        );
+    }
+
+    public function getFaceAPIHeader1() {
+        return array(
+            'content-type' => $this->APIResponseContent,
+            'ocp-apim-subscription-key' => $this->APIFaceKey1,
+            'accept-encoding' => 'gzip, deflate, br',
+            'cache-control' => 'no-cache'
+        );
+    }
+
+    public function getFaceAPIHeader2() {
+        return array(
+            'content-type' => $this->APIResponseContent,
+            'ocp-apim-subscription-key' => $this->APIFaceKey2,
             'accept-encoding' => 'gzip, deflate, br',
             'cache-control' => 'no-cache'
         );
@@ -254,6 +280,24 @@ class urlHelper {
 
     public function setAPITimeout($APITimeout) {
         $this->APITimeout = $APITimeout;
+        return $this;
+    }
+
+    public function getAPIFaceKey1() {
+        return $this->APIFaceKey1;
+    }
+
+    public function getAPIFaceKey2() {
+        return $this->APIFaceKey2;
+    }
+
+    public function setAPIFaceKey1($APIFaceKey1) {
+        $this->APIFaceKey1 = $APIFaceKey1;
+        return $this;
+    }
+
+    public function setAPIFaceKey2($APIFaceKey2) {
+        $this->APIFaceKey2 = $APIFaceKey2;
         return $this;
     }
 

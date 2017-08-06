@@ -98,6 +98,14 @@ Desenvolvedores que usam os Serviços Cognitivos, incluindo esta amostra,  dever
     > Esta operação gera uma lista de palavras ou tags que são relevantes para o conteúdo da imagem fornecida. O Computer Vision API pode retornar tags com base em objetos, seres vivos, cenários ou ações encontradas em imagens. Ao contrário das categorias, as tags não são organizadas de acordo com um sistema de classificação hierárquico, mas correspondem ao conteúdo da imagem. As tags podem conter dicas para evitar a ambiguidade ou fornecer contexto, por exemplo, a tag "violão" pode ser acompanhada da sugestão "instrumento musical". Todas as tags estão em inglês. 
     * 7.1 [Como Utilizar](</examples/TagImage/index.php>)
     * 7.2 [Retorno JSON](</examples/TagImage/response.json>)
+* 8.0 [Reconhecimento Emocional](</examples/EmotionRecognition/>)
+    > Reconhece as emoções expressas por uma ou mais pessoas em uma imagem, bem como retorna uma caixa delimitadora para o rosto. As emoções detectadas são felicidade, tristeza, surpresa, raiva, medo, desprezo e nojo ou neutro. 
+    * 7.1 [Como Utilizar](</examples/EmotionRecognition/index.php>)
+    * 7.2 [Retorno JSON](</examples/EmotionRecognition/response.json>)
+* 9.0 [Detecção de Face](</examples/FaceDetect/>)
+    > Detectar rostos humanos em uma imagem e retornar locais de rosto e, opcionalmente, com faceIds, marcos e atributos.
+    * 9.1 [Como Utilizar](</examples/FaceDetect/index.php>)
+    * 9.2 [Retorno JSON](</examples/FaceDetect/response.json>)
 
 ### Em breve mais opções
 

@@ -1,0 +1,69 @@
+[
+    {
+        "faceId": "62513e3a-801f-4396-8a84-c0a12655ce80",
+        "faceRectangle": {
+            "top": 122,
+            "left": 276,
+            "width": 129,
+            "height": 129
+        },
+        "faceAttributes": {
+            "smile": 0.891,
+            "headPose": {
+                "pitch": 0,
+                "roll": 16.5,
+                "yaw": 18.5
+            },
+            "gender": "male",
+            "age": 35.8,
+            "facialHair": {
+                "moustache": 0.4,
+                "beard": 0.4,
+                "sideburns": 0.4
+            },
+            "glasses": "NoGlasses",
+            "emotion": {
+                "anger": 0.003,
+                "contempt": 0.018,
+                "disgust": 0.003,
+                "fear": 0,
+                "happiness": 0.891,
+                "neutral": 0.083,
+                "sadness": 0.001,
+                "surprise": 0
+            },
+            "blur": {
+                "blurLevel": "low",
+                "value": 0
+            },
+            "exposure": {
+                "exposureLevel": "goodExposure",
+                "value": 0.43
+            },
+            "noise": {
+                "noiseLevel": "low",
+                "value": 0
+            },
+            "makeup": {
+                "eyeMakeup": false,
+                "lipMakeup": false
+            },
+            "accessories": [
+                {
+                    "type": "headwear",
+                    "confidence": 0.99
+                }
+            ],
+            "occlusion": {
+                "foreheadOccluded": true,
+                "eyeOccluded": false,
+                "mouthOccluded": false
+            },
+            "hair": {
+                "bald": 0,
+                "invisible": true,
+                "hairColor": []
+            }
+        }
+    }
+]
