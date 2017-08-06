@@ -71,6 +71,7 @@ Desenvolvedores que usam os Serviços Cognitivos, incluindo esta amostra,  dever
 
 #### Índice
 * 1.0 [Análise de Imagem](</examples/AnalyzeImage/>)
+    > Esta operação extrai um rico conjunto de recursos visuais com base no conteúdo da imagem. 
     * 1.1 [Como Utilizar](</examples/AnalyzeImage/index.php>)
     * 1.2 [Retorno JSON](</examples/AnalyzeImage/response.json>)
 * 2.0 [Descrição de Imagem](</examples/DescribeImage/>)
