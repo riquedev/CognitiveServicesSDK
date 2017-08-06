@@ -2,16 +2,6 @@
 
 namespace rqdev\packages\ComputerVisionAPI\GenerateThumbnail;
 
-/**
- *  Esta classe tem o objetivo de auxiliar na manipulação do retorno
- *  binário da API.
- * 
- *  @author Henrique da Silva Santos < rique_dev@hotmail.com >
- *  @copyright (c) 2017, Henrique da Silva Santos
- *  @license https://opensource.org/licenses/MIT
- *  @version 1.0.5
- * 
- */
 trait ImageProperties {
 
     /**
@@ -75,6 +65,19 @@ trait ImageProperties {
 
 }
 
+/**
+ *  Esta classe tem o objetivo de auxiliar na manipulação do retorno
+ *  binário da API.
+ *  Esta classe não é subordinada ao BaseHelper.
+ * 
+ *  @author Henrique da Silva Santos < rique_dev@hotmail.com >
+ *  @copyright (c) 2017, Henrique da Silva Santos
+ *  @license https://opensource.org/licenses/MIT
+ *  @version 1.0.5
+ *  @package \rqdev\packages\ComputerVisionAPI
+ *  @subpackage \rqdev\packages\ComputerVisionAPI\GenerateThumbnail
+ * 
+ */ 
 class Helper {
 
     /**

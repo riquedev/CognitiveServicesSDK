@@ -4,7 +4,8 @@ namespace rqdev\packages\ComputerVisionAPI;
 
 /**
  *  Esta classe tem o objetivo de auxiliar como base na manipulação de retornos
- *  da API.
+ *  da API (em geral).
+ *  Qualquer modificação nesta classe afetará todos os Helpers.
  * 
  *  @author Henrique da Silva Santos < rique_dev@hotmail.com >
  *  @copyright (c) 2017, Henrique da Silva Santos
@@ -16,6 +17,9 @@ class Helper {
 
     static protected $json;
 
+    /**
+     * @param string $json JSON do retorno.
+     */
     public function __construct(string $json) {
         self::$json = $json;
     }

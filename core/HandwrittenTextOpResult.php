@@ -21,6 +21,7 @@ class HandwrittenTextOperationResult extends urlHelper {
     }
 
     public function __construct() {
+        die('Handwritten Text Operation Result não foi finalizado.');
         require_once(realpath(dirname(__FILE__)) . "/settings.php");
         require_once(realpath(dirname(__FILE__)) . "/Handle2.php");
         require_once(realpath(dirname(__FILE__)) . "/BaseHelper.php");

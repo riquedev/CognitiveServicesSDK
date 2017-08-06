@@ -19,10 +19,15 @@ define("CVA_API_LOCATION", "westcentralus");
 
 /**
  * SERVER LOCATION
+ * 
  * West US - westus
+ * 
  * East US 2 - eastus2
+ * 
  * West Central US - westcentralus
+ * 
  * West Europe - westeurope
+ * 
  * Southeast Asia - southeastasia
  */
 define("CVA_API_LOCATION_ARRAY", [
@@ -34,9 +39,19 @@ define("CVA_API_LOCATION_ARRAY", [
         ]
 );
 
-
+/**
+ * Versão da API a ser utilizada.
+ */
 define("CVA_API_VERSION", 'v1.0');
+
+/**
+ * URL complementar após identificação da Região.
+ */
 define("CVA_AFTER_LOCATION", '.api.cognitive.microsoft.com');
+
+/**
+ * Paths da API
+ */
 define("CVA_API_PATHS", ['vision', 'emotion', 'face']);
 
 /**
@@ -109,8 +124,8 @@ define("CVA_KEY_FACEAPI2", '0ba31e5759ae419da346f14ec368a5e2');
  */
 define("CVA_CONTENT", "application/json");
 
-/*
- * Header para requisição
+/**
+ * Header Primária para requisição
  * ( Computer Vision)
  */
 define("CVA_HEADERS_COMPUTERVISION1", array(
@@ -121,6 +136,10 @@ define("CVA_HEADERS_COMPUTERVISION1", array(
     'content-type' => 'application/json'
 ));
 
+/**
+ * Header Secundária para requisição
+ * ( Computer Vision)
+ */
 define("CVA_HEADERS_COMPUTERVISION2", array(
     'content-type' => CVA_CONTENT,
     'ocp-apim-subscription-key' => CVA_KEY_COMPUTERVISION2,
@@ -137,58 +156,154 @@ define("CVA_MAX_REDIRS", 10);
 // Tempo de espera
 define("CVA_TIMEOUT", 30);
 
-/*
- * Opções da API
- * ( Computer Vision )
+/**
+ * Características Visuais
+ * > Categorias
  */
 define("CVA_VISUAL_FEATURES_CATEGORIES", "Categories");
 
+/**
+ * Características Visuais
+ * > Tags
+ */
 define("CVA_VISUAL_FEATURES_TAGS", "Tags");
 
+/**
+ * Características Visuais
+ * > Descrição
+ */
 define("CVA_VISUAL_FEATURES_DESCRIPTION", "Description");
 
+/**
+ * Características Visuais
+ * > Rostos
+ */
 define("CVA_VISUAL_FEATURES_FACES", "Faces");
 
+/**
+ * Características Visuais
+ * > Tipo de Imagem
+ */
 define("CVA_VISUAL_FEATURES_IMAGE_TYPE", "ImageType");
 
+/**
+ * Características Visuais
+ * > Cores
+ */
 define("CVA_VISUAL_FEATURES_COLOR", "Color");
 
+/**
+ * Características Visuais
+ * > Conteúdo Adulto
+ */
 define("CVA_VISUAL_FEATURES_ADULT", "Adult");
 
+/**
+ * Detalhes
+ * > Celebridades
+ */
 define("CVA_DETAILS_CELEBRITIES", "Celebrities");
 
+/**
+ * Detalhes
+ * > Landmarks 
+ */
 define("CVA_DETAILS_LANDMARKS", "Landmarks");
 
+/**
+ * Conteúdo Específico
+ * > Celebridades 
+ */
 define("CVA_RECOGNIZEDOMAINSPECIFICCONTENT_CELEBRITIES", 'celebrities');
 
+/**
+ * Conteúdo Específico
+ * > Landmarks 
+ */
 define("CVA_RECOGNIZEDOMAINSPECIFICCONTENT_LANDMARKS", 'landmarks');
 
+/**
+ * Reconhecimento Facial
+ * > Idade 
+ */
 define("CVA_FACEDETECT_ATTRIBUTE_AGE", 'age');
 
-define("CVA_FACEDETECT_ATTRIBUTE_GENDER", 'GENDER');
+/**
+ * Reconhecimento Facial
+ * > Gênero 
+ */
+define("CVA_FACEDETECT_ATTRIBUTE_GENDER", 'gender');
 
+/**
+ * Reconhecimento Facial
+ * > Posição da Cabeça 
+ */
 define("CVA_FACEDETECT_ATTRIBUTE_HEADPOSE", 'headPose');
 
+/**
+ * Reconhecimento Facial
+ * > Sorriso / Boca
+ */
 define("CVA_FACEDETECT_ATTRIBUTE_SMILE", 'smile');
 
+/**
+ * Reconhecimento Facial
+ * > Pelos Faciais 
+ */
 define("CVA_FACEDETECT_ATTRIBUTE_FACIAL_HAIR", 'facialHair');
 
+/**
+ * Reconhecimento Facial
+ * > Óculos 
+ */
 define("CVA_FACEDETECT_ATTRIBUTE_GLASSES", 'glasses');
 
+/**
+ * Reconhecimento Facial
+ * > Emoção 
+ */
 define("CVA_FACEDETECT_ATTRIBUTE_EMOTION", 'emotion');
 
+/**
+ * Reconhecimento Facial
+ * > Cabelo
+ */
 define("CVA_FACEDETECT_ATTRIBUTE_HAIR", 'hair');
 
+/**
+ * Reconhecimento Facial
+ * > Maquiagem 
+ */
 define("CVA_FACEDETECT_ATTRIBUTE_MAKEUP", 'makeup');
 
+/**
+ * Reconhecimento Facial
+ * > Occlusion  
+ */
 define("CVA_FACEDETECT_ATTRIBUTE_OCCLUSION", 'occlusion');
 
+/**
+ * Reconhecimento Facial
+ * > Acessórios 
+ */
 define("CVA_FACEDETECT_ATTRIBUTE_ACCESSORIES", 'accessories');
 
+/**
+ * Reconhecimento Facial
+ * > Blur 
+ */
 define("CVA_FACEDETECT_ATTRIBUTE_BLUR", 'blur');
 
+/**
+ * Reconhecimento Facial
+ * > Exposure 
+ */
 define("CVA_FACEDETECT_ATTRIBUTE_EXPOSURE", 'exposure');
 
+/**
+ * Reconhecimento Facial
+ * > Noise 
+ */
 define("CVA_FACEDETECT_ATTRIBUTE_NOISE", 'noise');
 
 /**
