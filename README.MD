@@ -75,21 +75,27 @@ Desenvolvedores que usam os Serviços Cognitivos, incluindo esta amostra,  dever
     * 1.1 [Como Utilizar](</examples/AnalyzeImage/index.php>)
     * 1.2 [Retorno JSON](</examples/AnalyzeImage/response.json>)
 * 2.0 [Descrição de Imagem](</examples/DescribeImage/>)
+    > Esta operação gera uma descrição de uma imagem em linguagem legível para humanos com frases completas. A descrição é baseada em uma coleção de tags de conteúdo, que também são devolvidos pela operação. Mais de uma descrição pode ser gerada para cada imagem. As descrições são ordenadas pelo seu índice de confiança. Todas as descrições estão em inglês. 
     * 2.1 [Como Utilizar](</examples/DescribeImage/index.php>)
     * 2.2 [Retorno JSON](</examples/DescribeImage/response.json>)
 * 3.0 [Gerador de Thumbnail](</examples/GenerateThumbnail/>)
+    > Esta operação gera uma imagem em miniatura com a largura e a altura especificadas pelo usuário. Por padrão, o serviço analisa a imagem, identifica a região de interesse (ROI) e gera coordenadas de corte inteligentes com base no ROI. 
     * 3.1 [Como Utilizar](</examples/GenerateThumbnail/index.php>)
     * 3.2 [Retorno Binário](</examples/GenerateThumbnail/download.jfif>)
 * 4.0 [Modelos Disponíveis](</examples/ListDomainSpecificModels/>)
+    > Esta operação retorna a lista de modelos específicos de domínio suportados pela API Computer Vision.
     * 4.1 [Como Utilizar](</examples/ListDomainSpecificModels/index.php>)
     * 4.2 [Retorno JSON](</examples/ListDomainSpecificModels/response.json>)
 * 5.0 [Reconhecimento Óptico de Caracteres](</examples/OpticalCharacterRecognition/>)
+    > O reconhecimento óptico de caracteres (OCR) detecta texto em uma imagem e extrai os caracteres reconhecidos em um fluxo de caracteres utilizável pela máquina.
     * 5.1 [Como Utilizar](</examples/OpticalCharacterRecognition/index.php>)
     * 5.2 [Retorno JSON](</examples/OpticalCharacterRecognition/response.json>)
 * 6.0 [Reconhecimento de Conteúdo Específico](</examples/RecognizeDomainSpecificContent/>)
+    > Esta operação reconhece conteúdo dentro de uma imagem aplicando um modelo específico de domínio. 
     * 6.1 [Como Utilizar](</examples/RecognizeDomainSpecificContent/index.php>)
     * 6.2 [Retorno JSON](</examples/RecognizeDomainSpecificContent/response.json>)
 * 7.0 [Tag Image](</examples/TagImage/>)
+    > Esta operação gera uma lista de palavras ou tags que são relevantes para o conteúdo da imagem fornecida. O Computer Vision API pode retornar tags com base em objetos, seres vivos, cenários ou ações encontradas em imagens. Ao contrário das categorias, as tags não são organizadas de acordo com um sistema de classificação hierárquico, mas correspondem ao conteúdo da imagem. As tags podem conter dicas para evitar a ambiguidade ou fornecer contexto, por exemplo, a tag "violão" pode ser acompanhada da sugestão "instrumento musical". Todas as tags estão em inglês. 
     * 7.1 [Como Utilizar](</examples/TagImage/index.php>)
     * 7.2 [Retorno JSON](</examples/TagImage/response.json>)
 
